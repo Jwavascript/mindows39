@@ -1,0 +1,620 @@
+/* 기본 스타일 초기화 및 설정 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  background: url("src/themarks.jpg") no-repeat center center #000;
+  background-size: contain;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader img {
+  width: 150px;
+  height: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50px; /* 작업 표시줄 높이만큼 마진 추가 */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/*컨트롤 패널 스타일*/
+
+#control {
+  position: absolute;
+  top: 5vh;
+  left: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+#control button {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  color: white;
+  margin-bottom: 20px;
+  border: none;
+  flex-direction: column;
+  background: none;
+  position: relative;
+  z-index: 2; /* 다른 요소 위로 버튼을 올림 */
+}
+#control button img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#control button div {
+  text-align: center;
+  margin: auto;
+}
+/* 작업 표시줄 스타일 */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #4a929a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.taskbar__start {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.taskbar__items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+.taskbar__right {
+  display: flex;
+  height: 100%;
+}
+
+.taskbar__volume {
+  width: 20px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.clock_div {
+  display: flex;
+  align-items: center;
+}
+.taskbar__clock {
+  font-size: 15px;
+  margin-bottom: 2px;
+  margin-right: 20px;
+}
+
+.volume-control {
+  display: none;
+  margin-right: 10px;
+  width: 30vw;
+  height: 120px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+.volume_text {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.volume_slider {
+  text-align: center;
+}
+
+#volumeSlider {
+  width: 80%;
+}
+@media (max-width: 700px) {
+  .volume-control {
+    display: none;
+    margin-right: 10px;
+    width: 40vw;
+    height: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+  }
+}
+
+/*시작 버튼 누를 시 모달 창 */
+.start-window {
+  color: white;
+  width: 30vw;
+  height: 530px;
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+  background-color: rgba(21, 21, 21, 0.9);
+  transition: all 0.1s ease-in-out;
+  z-index: 3;
+}
+@media (max-width: 700px) {
+  .start-window {
+    width: 50vw;
+    height: 530px;
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+    background-color: rgba(21, 21, 21, 0.9);
+    transition: all 0.1s ease-in-out;
+    z-index: 3;
+  }
+}
+
+.start-window .fluid-container {
+  padding-top: 530px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.start-window .fluid-container.activecontainer {
+  padding-top: 0;
+}
+
+.start-window-fade {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hidden-start {
+  display: none;
+}
+
+.start-window .first-column .head-med {
+  padding: 10px;
+}
+
+.start-window .first-column {
+  height: 530px;
+  overflow: auto;
+}
+
+.start-window .first-column .media-heading {
+  margin-left: 10px;
+  line-height: 35px;
+}
+
+.start-window .first-column .media:hover,
+.start-window .first-column .head-med:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.start-window .first-column .media {
+  margin-top: 0;
+  padding: 10px;
+  display: flex;
+}
+
+/* 윈도우 스타일의 에러 창 */
+.window {
+  background-color: #000;
+  opacity: 0.8;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .window {
+    background-color: #000;
+    opacity: 0.8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.window_header {
+  border: 2px solid;
+  background-color: #8e8e8e;
+  border-color: #ce86ad;
+  border-bottom: none;
+  text-align: center;
+  color: red;
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window__title {
+  margin: 0;
+}
+
+.window__close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.window__body {
+  border: 2px solid;
+  border-color: #ce86ad;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.window__body-text {
+  margin: 0;
+}
+
+.glitch {
+  position: relative;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 4px;
+  z-index: 1;
+}
+
+.glitch:before {
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 100%;
+  color: #fff;
+  background-color: #222;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-before 3s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 100%;
+  color: #fff;
+  background-color: #222;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-after 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-before {
+  0% {
+    clip: rect(61px, 9999px, 52px, 0);
+  }
+
+  5% {
+    clip: rect(33px, 9999px, 144px, 0);
+  }
+
+  10% {
+    clip: rect(121px, 9999px, 115px, 0);
+  }
+
+  15% {
+    clip: rect(144px, 9999px, 162px, 0);
+  }
+
+  20% {
+    clip: rect(62px, 9999px, 180px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 42px, 0);
+  }
+
+  30% {
+    clip: rect(147px, 9999px, 179px, 0);
+  }
+
+  35% {
+    clip: rect(99px, 9999px, 63px, 0);
+  }
+
+  40% {
+    clip: rect(188px, 9999px, 122px, 0);
+  }
+
+  45% {
+    clip: rect(154px, 9999px, 14px, 0);
+  }
+
+  50% {
+    clip: rect(63px, 9999px, 37px, 0);
+  }
+
+  55% {
+    clip: rect(161px, 9999px, 147px, 0);
+  }
+
+  60% {
+    clip: rect(109px, 9999px, 175px, 0);
+  }
+
+  65% {
+    clip: rect(157px, 9999px, 88px, 0);
+  }
+
+  70% {
+    clip: rect(173px, 9999px, 131px, 0);
+  }
+
+  75% {
+    clip: rect(62px, 9999px, 70px, 0);
+  }
+
+  80% {
+    clip: rect(24px, 9999px, 153px, 0);
+  }
+
+  85% {
+    clip: rect(138px, 9999px, 40px, 0);
+  }
+
+  90% {
+    clip: rect(79px, 9999px, 136px, 0);
+  }
+
+  95% {
+    clip: rect(25px, 9999px, 34px, 0);
+  }
+
+  100% {
+    clip: rect(173px, 9999px, 166px, 0);
+  }
+}
+
+@keyframes noise-after {
+  0% {
+    clip: rect(26px, 9999px, 33px, 0);
+  }
+
+  5% {
+    clip: rect(140px, 9999px, 198px, 0);
+  }
+
+  10% {
+    clip: rect(184px, 9999px, 89px, 0);
+  }
+
+  15% {
+    clip: rect(121px, 9999px, 6px, 0);
+  }
+
+  20% {
+    clip: rect(181px, 9999px, 99px, 0);
+  }
+
+  25% {
+    clip: rect(154px, 9999px, 133px, 0);
+  }
+
+  30% {
+    clip: rect(134px, 9999px, 169px, 0);
+  }
+
+  35% {
+    clip: rect(26px, 9999px, 187px, 0);
+  }
+
+  40% {
+    clip: rect(147px, 9999px, 137px, 0);
+  }
+
+  45% {
+    clip: rect(31px, 9999px, 52px, 0);
+  }
+
+  50% {
+    clip: rect(191px, 9999px, 109px, 0);
+  }
+
+  55% {
+    clip: rect(74px, 9999px, 54px, 0);
+  }
+
+  60% {
+    clip: rect(145px, 9999px, 75px, 0);
+  }
+
+  65% {
+    clip: rect(153px, 9999px, 198px, 0);
+  }
+
+  70% {
+    clip: rect(99px, 9999px, 136px, 0);
+  }
+
+  75% {
+    clip: rect(118px, 9999px, 192px, 0);
+  }
+
+  80% {
+    clip: rect(1px, 9999px, 83px, 0);
+  }
+
+  85% {
+    clip: rect(145px, 9999px, 98px, 0);
+  }
+
+  90% {
+    clip: rect(121px, 9999px, 154px, 0);
+  }
+
+  95% {
+    clip: rect(156px, 9999px, 44px, 0);
+  }
+
+  100% {
+    clip: rect(67px, 9999px, 122px, 0);
+  }
+}
+
+/* 안티바이러스 ui */
+
+.av {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  width: 500px;
+  background-color: white;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .av {
+    position: fixed;
+    width: 200px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.av_header {
+  height: 50px;
+  background-color: #8e8e8e;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
+
+  padding: 5px;
+  cursor: move;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.av_body {
+  color: black;
+  padding: 15px;
+  font-size: 12px;
+}
+
+#error-messages {
+  margin: 10px;
+  padding: 10px;
+  color: red;
+  font-size: 24px;
+}
+
+.progress_div {
+  width: 100%;
+  background-color: gray;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #79ac26;
+  margin: 10px 0;
+  position: relative;
+}
+
+#progress-bar::after {
+  content: "";
+  height: 100%;
+  width: 0;
+  background-color: #79ac26;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.av_under {
+  display: flex;
+}
+.av_pic {
+  margin: auto;
+}
+.av_icon {
+  margin-left: auto;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 700px) {
+  .av_icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* 전체 화면 메시지 스타일 */
+.fullscreen-hidden {
+  display: none;
+}
+
+.fullscreen-visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}

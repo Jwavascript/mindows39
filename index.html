@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextAlive App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <img src="./xp.gif" alt="Loading..." />
+    </div>
+    <!-- Icons on desktop. Play music, pause, jump, rewind  -->
+    <div id="container"></div>
+    <div id="control">
+      <button id="play">
+        <img src="src/play.svg" />
+        <div>Play</div>
+      </button>
+      <button id="jump">
+        <img src="src/jump.svg" />
+        <div>Jump</div>
+      </button>
+      <button id="pause">
+        <img src="src/pause.svg" />
+        <div>Pause</div>
+      </button>
+      <button id="rewind">
+        <img src="src/rewind.svg" />
+        <div>Rewind</div>
+      </button>
+      <button id="antivirus">
+        <img src="src/antivirusicon.jpg" />
+        <div>Antivirus</div>
+      </button>
+    </div>
+
+    <!-- Error window templates -->
+    <template id="error-window-template">
+      <div class="window">
+        <div class="window_header">
+          <span class="window__title">Error</span>
+          <button class="window__close" data-ok>X</button>
+        </div>
+        <div class="window__body">
+          <img
+            class="window__body-icon"
+            src="src/errormiku.jpg"
+            width="50"
+            height="50"
+          />
+          <div class="window__body-text glitch" data-glitch="glitch"></div>
+        </div>
+      </div>
+    </template>
+
+    <!-- anti-virus program ui -->
+
+    <div class="av hidden">
+      <div class="av_header">AntiVirus</div>
+      <div class="av_body">
+        <div>remaining time...</div>
+        <div class="progress_div">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div class="av_under">
+          <div class="av_under_text">
+            <div>total</div>
+            <div id="error-messages">Close error please</div>
+            <div>errors eliminated</div>
+          </div>
+          <div class="av_pic">
+            <img src="src/antivirusmascort.jpg" class="av_icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fullscreen-message" class="fullscreen-hidden">Virus Alert</div>
+
+    <!-- Bottom Taskbar Area -->
+    <div id="taskbar">
+      <!-- button click to see the modal on the left. -->
+      <div class="taskbar__start" id="start-win">
+        <img src="src/start.jpg" alt="Start" class="taskbar__icon" />
+        <span>Start</span>
+      </div>
+
+      <!-- Volume control modals and clock zones. -->
+      <div class="taskbar__right" id="taskbar__right">
+        <img
+          src="src/volume-1.svg"
+          alt="App 1"
+          class="taskbar__volume"
+          id="taskbar__volume"
+        />
+        <div class="clock_div"><div class="taskbar__clock">12:00 PM</div></div>
+      </div>
+    </div>
+
+    <!-- modals-->
+    <!-- volume modal-->
+    <div class="volume-control" id="start-volume">
+      <div class="volume_text">
+        <label for="volumeSlider">Volume</label>
+      </div>
+      <div class="volume_slider">
+        <input id="volumeSlider" type="range" min="0" max="1" step=".001" />
+      </div>
+    </div>
+
+    <!-- playlist modal-->
+    <div class="start-window-fade hidden-start" id="start-window-fade"></div>
+    <div class="start-window hidden-start" id="start-window">
+      <div class="fluid-container" id="container-start">
+        <div class="col-xs-3 first-column">
+          <div class="wrap-scroll">
+            <div class="head-med">
+              <small>Playlist</small>
+            </div>
+            <div id="superhero" class="media">
+              <div class="media-left">
+                <img
+                  class="media-object"
+                  src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                  width="35"
+                  height="35"
+                  alt="..."
+                />
+              </div>
+              <div class="media-body">
+                <small class="media-heading">SUPERHERO</small>
+              </div>
+            </div>
+            <div id="ourfuturewithyou" class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img
+                    class="media-object"
+                    src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                    width="35"
+                    height="35"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <small class="media-heading">いつか君と話したミライは</small>
+              </div>
+            </div>
+            <div id="futurenote" class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img
+                    class="media-object"
+                    src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                    width="35"
+                    height="35"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <small class="media-heading">フューチャーノーツ</small>
+              </div>
+            </div>
+            <div id="miraisymphony" class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img
+                    class="media-object"
+                    src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                    width="35"
+                    height="35"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <small class="media-heading">未来交響曲</small>
+              </div>
+            </div>
+            <div id="reality" class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img
+                    class="media-object"
+                    src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                    width="35"
+                    height="35"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <small class="media-heading">リアリティ</small>
+              </div>
+            </div>
+            <div id="themarks" class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img
+                    class="media-object"
+                    src="https://mohamedelghandour.github.io/windows-10/img/winicon.png"
+                    width="35"
+                    height="35"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <small class="media-heading">The Marks</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <script src="./ui.js"></script>
+  </body>
+</html>
