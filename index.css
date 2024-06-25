@@ -8,7 +8,8 @@ html {
   overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #000;
-  background: url("src/themarks.jpg") no-repeat center center #000;
+  background: url("./assets/backgrounds/themarks.jpg") no-repeat center center
+    #000;
   background-size: contain;
 }
 

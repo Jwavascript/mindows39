@@ -26,7 +26,7 @@ superheroDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/superhero.jpg")';
+    body.style.backgroundImage = 'url("./assets/backgrounds/superhero.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#00A7C1";
@@ -58,7 +58,8 @@ ourfuturewithyouDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/ourfuturewithyou.jpg")';
+    body.style.backgroundImage =
+      'url("./assets/backgrounds/ourfuturewithyou.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#08498B";
@@ -90,7 +91,7 @@ futurenoteDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/futurenote.jpg")';
+    body.style.backgroundImage = 'url("./assets/backgrounds/futurenote.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#66619E";
@@ -123,7 +124,8 @@ miraisymphonyDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/miraisymphony.jpg")';
+    body.style.backgroundImage =
+      'url("./assets/backgrounds/miraisymphony.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#E9DBD2";
@@ -156,7 +158,7 @@ realityDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/reality.jpg")';
+    body.style.backgroundImage = 'url(url("./assets/backgrounds/reality.jpg"))';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#FFE3C4";
@@ -189,7 +191,7 @@ themarksDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("src/themarks.jpg")';
+    body.style.backgroundImage = 'url("./assets/backgrounds/themarks.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#000000";
