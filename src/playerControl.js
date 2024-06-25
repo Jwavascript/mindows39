@@ -1,5 +1,5 @@
 import { Player, Ease } from "textalive-app-api";
-import { contestSongs } from "./contestsong.js";
+import { contestSongs } from "../contestsong.js";
 import { animatePhrase } from "./animation.js";
 
 export const player = new Player({

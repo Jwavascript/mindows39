@@ -1,11 +1,11 @@
-import { initializePlayer } from "./playerControl.js";
-import { updateClock } from "./clock.js";
-import { showLoader, hideLoader } from "./loaderFunctions.js";
-import { volumeController } from "./volumeControl.js";
-import { updateProgressBar } from "./progressBar.js";
-import "./eventHandlers.js"; // Event handlers will initialize   themselves
-import "./uiControl.js"; // UI controls will initialize themselves
-import "./selectHandlers.js";
+import { initializePlayer } from "./src/playerControl.js";
+import { updateClock } from "./src/clock.js";
+import { showLoader, hideLoader } from "./src/loaderFunctions.js";
+import { volumeController } from "./src/volumeControl.js";
+import { updateProgressBar } from "./src/progressBar.js";
+import "./src/eventHandlers.js"; // Event handlers will initialize   themselves
+import "./src/uiControl.js"; // UI controls will initialize themselves
+import "./src/selectHandlers.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   showLoader();

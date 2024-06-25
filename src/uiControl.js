@@ -1,4 +1,4 @@
-import { makeDraggable } from "./draggable.js";
+import { makeDraggable } from "./draggable";
 
 document.getElementById("start-win").onclick = function () {
   "use strict";
