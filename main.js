@@ -1,5 +1,6 @@
 import { Player, Ease } from "textalive-app-api";
 import { contestSongs } from "./contestsong.js";
+import { updateClock } from "./clock.js";
 
 // Track lyrics from previous phases by adding global variables
 let lastPhraseText = "";
@@ -115,22 +116,9 @@ function onThrottledTimeUpdate(position) {
   positionEl.textContent = String(Math.floor(position));
 }
 
-// Taskbar Clock Update Function
-function updateClock() {
-  const clockEl = document.querySelector(".taskbar__clock");
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const ampm = hours >= 12 ? "PM" : "AM";
-  const formattedHours = hours % 12 || 12;
-  const formattedMinutes = minutes.toString().padStart(2, "0");
-  clockEl.textContent = `${formattedHours}:${formattedMinutes} ${ampm}`;
-}
-
 // Set Clock Update Interval (Every Minute)
-setInterval(updateClock, 60000);
 updateClock(); // Set the clock immediately upon page loading
-
+setInterval(updateClock, 60000);
 // Volume Settings
 var volumeSlider = document.getElementById("volumeSlider");
 var lastVolumePosition;
