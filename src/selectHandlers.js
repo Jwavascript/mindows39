@@ -158,7 +158,7 @@ realityDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url(url("./assets/backgrounds/reality.jpg"))';
+    body.style.backgroundImage = 'url("./assets/backgrounds/reality.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#FFE3C4";

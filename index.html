@@ -8,7 +8,8 @@
   </head>
   <body>
     <div id="loader" class="loader">
-      <img src="./xp.gif" alt="Loading..." />
+      <div class="loadertitle">Mindows 39</div>
+      <img src="./assets/images/loader.gif" alt="Loading..." />
     </div>
     <!-- Icons on desktop. Play music, pause, jump, rewind  -->
     <div id="container"></div>
@@ -30,7 +31,7 @@
         <div>Rewind</div>
       </button>
       <button id="antivirus">
-        <img src="assets/icons/antivirusicon.jpg" />
+        <img src="assets/icons/antivirusicon.png" />
         <div>Antivirus</div>
       </button>
     </div>
@@ -45,7 +46,7 @@
         <div class="window__body">
           <img
             class="window__body-icon"
-            src="assets/images/errormiku.jpg"
+            src="assets/images/errormiku.png"
             width="50"
             height="50"
           />
@@ -71,19 +72,25 @@
             <div>errors eliminated</div>
           </div>
           <div class="av_pic">
-            <img src="assets/images/antivirusmascort.jpg" class="av_icon" />
+            <img src="assets/images/antivirusmascort.png" class="av_icon" />
           </div>
         </div>
       </div>
     </div>
 
-    <div id="fullscreen-message" class="fullscreen-hidden">Virus Alert</div>
+    <div id="fullscreen-message" class="fullscreen-hidden">
+      <h1>:&#40;</h1>
+      <h2>
+        Your PC ran into a problem and needs to restart. We're just collecting
+        some error info, and then we'll restart for you.
+      </h2>
+    </div>
 
     <!-- Bottom Taskbar Area -->
     <div id="taskbar">
       <!-- button click to see the modal on the left. -->
       <div class="taskbar__start" id="start-win">
-        <img src="assets/icons/start.jpg" alt="Start" class="taskbar__icon" />
+        <img src="assets/icons/start.png" alt="Start" class="taskbar__icon" />
         <span>Start</span>
       </div>
 
