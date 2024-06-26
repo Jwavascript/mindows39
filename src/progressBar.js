@@ -15,5 +15,11 @@ export function updateProgressBar() {
     document
       .getElementById("fullscreen-message")
       .classList.add("fullscreen-visible");
+  } else if (
+    currentTime >= maxTime &&
+    getCount() >= player.video.phrases.length - 1
+  ) {
+    document.getElementById("notepad").style.display = "block";
+    document.getElementById("letter").style.display = "block";
   }
 }

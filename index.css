@@ -13,6 +13,7 @@ html {
   background-size: contain;
 }
 
+/* bootscreen loader */
 .loader {
   position: fixed;
   top: 0;
@@ -59,10 +60,11 @@ html {
   display: flex;
   flex-direction: column;
 }
+
 #control button {
   width: 70px;
   height: 70px;
-  display: flex;
+
   color: white;
   margin-bottom: 20px;
   border: none;
@@ -80,6 +82,22 @@ html {
   text-align: center;
   margin: auto;
 }
+
+#control button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#control button:hover img {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
+}
+
+#letter {
+  display: none;
+}
+
 /* 작업 표시줄 스타일 */
 #taskbar {
   position: fixed;
@@ -122,6 +140,19 @@ html {
   width: 20px;
   height: 100%;
   margin-right: 20px;
+}
+
+.taskbar__icon:hover,
+.taskbar__volume:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.taskbar__icon img:hover,
+.taskbar__volume img:hover {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
 }
 
 .clock_div {
@@ -265,13 +296,13 @@ html {
 }
 
 .window_header {
-  border: 2px solid;
-  background-color: #8e8e8e;
-  border-color: #ce86ad;
+  border: 1px solid;
+  background-color: #ce86ad;
+  padding: 5px;
+  border-color: black;
   border-bottom: none;
   text-align: center;
-  color: red;
-  padding: 5px;
+  color: rgb(255, 255, 255);
   cursor: move;
   display: flex;
   justify-content: space-between;
@@ -291,9 +322,15 @@ html {
   padding: 5px;
 }
 
+.window__close:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .window__body {
-  border: 2px solid;
-  border-color: #ce86ad;
+  border: 1px solid;
+  border-color: black;
   color: white;
   padding: 15px;
   text-align: center;
@@ -518,6 +555,7 @@ html {
   left: 30%;
   width: 500px;
   background-color: white;
+  border: 1px solid #ccc;
 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -529,6 +567,7 @@ html {
     position: fixed;
     width: 200px;
     background-color: white;
+    border: 1px solid #ccc;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     overflow: hidden;
@@ -536,16 +575,30 @@ html {
 }
 
 .av_header {
-  height: 50px;
-  background-color: #8e8e8e;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #2b5797;
   color: white;
-  text-align: center;
-
   padding: 5px;
-  cursor: move;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.av_title {
+  margin-left: 10px;
+}
+
+.av_close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.av_close:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .av_body {
@@ -603,13 +656,79 @@ html {
   }
 }
 
+/* Notepad UI Styles */
+#notepad {
+  position: fixed;
+  border-radius: 5px;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
+  background-color: white;
+  top: 10vh;
+  left: 10vw;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  #notepad {
+    position: fixed;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+.notepad-header {
+  background-color: #2b5797;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notepad-title {
+  margin-left: 10px;
+}
+
+.notepad-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.notepad-close:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.notepad-content {
+  flex: 1;
+  width: 100%;
+  height: 80%;
+  border: none;
+  padding: 10px;
+  resize: none;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 14px;
+}
+
 /* 전체 화면 메시지 스타일 */
 .fullscreen-hidden {
   display: none;
 }
 
 .fullscreen-visible {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -622,4 +741,14 @@ html {
   align-items: center;
   justify-content: center;
   z-index: 100;
+}
+
+.fullscreen-visible h1 {
+  font-size: 15vw;
+  margin: 5vh;
+}
+
+.fullscreen-visible h2 {
+  font-size: 4vh;
+  margin: 2vh;
 }

@@ -28,14 +28,23 @@ document.getElementById("taskbar__right").onclick = function () {
 // antivirus icon onclick
 document.getElementById("antivirus").onclick = function () {
   let element = document.getElementById("av");
-  if (element.style.display == "none") element.style.display = "block";
-  else element.style.display = "none";
+  element.style.display = "block";
 };
 makeDraggable(
   document.getElementById("av"),
   document.querySelector(".av_header")
 );
 
+document.querySelector(".av_close").onclick = function () {
+  let element = document.getElementById("av");
+  element.style.display = "none";
+};
+
+//notepad
+makeDraggable(
+  document.getElementById("notepad"),
+  document.querySelector(".notepad-header")
+);
 function fadeOutByMe(element) {
   "use strict";
   var opacity = 1,
