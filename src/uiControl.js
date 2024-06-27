@@ -35,10 +35,14 @@ makeDraggable(
   document.querySelector(".av_header")
 );
 
-document.querySelector(".av_close").onclick = function () {
+document.querySelector(".av_close").addEventListener("click", () => {
   let element = document.getElementById("av");
   element.style.display = "none";
-};
+});
+document.querySelector(".av_close").addEventListener("touchstart", () => {
+  let element = document.getElementById("av");
+  element.style.display = "none";
+});
 
 //notepad
 makeDraggable(
