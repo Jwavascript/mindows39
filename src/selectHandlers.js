@@ -21,7 +21,7 @@ superheroDiv.addEventListener("click", () => {
       },
     });
 
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
@@ -53,7 +53,7 @@ ourfuturewithyouDiv.addEventListener("click", () => {
         lyricDiffId: 13963,
       },
     });
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
@@ -86,7 +86,7 @@ futurenoteDiv.addEventListener("click", () => {
         lyricDiffId: 13964,
       },
     });
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
@@ -119,7 +119,7 @@ miraisymphonyDiv.addEventListener("click", () => {
       },
     });
 
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
@@ -153,7 +153,7 @@ realityDiv.addEventListener("click", () => {
       },
     });
 
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
@@ -186,7 +186,7 @@ themarksDiv.addEventListener("click", () => {
       },
     });
 
-    const avContainer = document.getElementById("error-messages");
+    const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 

@@ -1,5 +1,6 @@
 import { player } from "./playerControl.js";
 import { updateAvMessage } from "./avMessage.js";
+import { setCount } from "./animation.js";
 
 const playBtn = document.querySelector("#play");
 const jumpBtn = document.querySelector("#jump");
@@ -27,7 +28,8 @@ pauseBtn.addEventListener("click", () => {
 
 rewindBtn.addEventListener("click", () => {
   player.video && player.requestMediaSeek(0);
-  const avContainer = document.getElementById("error-messages");
+  const avContainer = document.getElementById("error_messages");
+  setCount(0);
   avContainer.innerHTML = "";
   updateAvMessage(player);
 });

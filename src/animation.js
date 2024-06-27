@@ -11,11 +11,11 @@ export function animatePhrase(now, unit, player) {
     console.log(currentText);
 
     if (currentText !== lastPhraseText) {
-      const template = document.querySelector("#error-window-template");
+      const template = document.querySelector("#error_window_template");
       if (!template) return;
       const clone = template.content.cloneNode(true);
 
-      const windowBodyText = clone.querySelector(".window__body-text");
+      const windowBodyText = clone.querySelector(".window_body_text");
       if (!windowBodyText) return;
       windowBodyText.textContent = currentText;
       windowBodyText.dataset.glitch = currentText;

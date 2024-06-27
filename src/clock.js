@@ -1,5 +1,5 @@
 export function updateClock() {
-  const clockEl = document.querySelector(".taskbar__clock");
+  const clockEl = document.querySelector(".taskbar_clock");
   const now = new Date();
   const hours = now.getHours();
   const minutes = now.getMinutes();

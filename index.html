@@ -41,20 +41,20 @@
     </div>
 
     <!-- Error window templates -->
-    <template id="error-window-template">
+    <template id="error_window_template">
       <div class="window">
         <div class="window_header">
-          <span class="window__title">Error</span>
-          <button class="window__close" data-ok>X</button>
+          <span class="window_title">Error</span>
+          <button class="window_close" data-ok>X</button>
         </div>
-        <div class="window__body">
+        <div class="window_body">
           <img
-            class="window__body-icon"
+            class="window_body_icon"
             src="assets/images/errormiku.png"
             width="50"
             height="50"
           />
-          <div class="window__body-text glitch" data-glitch="glitch"></div>
+          <div class="window_body_text glitch" data-glitch="glitch"></div>
         </div>
       </div>
     </template>
@@ -69,13 +69,13 @@
       <div class="av_body">
         <div>remaining time...</div>
         <div class="progress_div">
-          <div id="progress-bar"></div>
+          <div id="progress_bar"></div>
         </div>
 
         <div class="av_under">
           <div class="av_under_text">
             <div>total</div>
-            <div id="error-messages">Close error please</div>
+            <div id="error_messages">Close error please</div>
             <div>errors eliminated</div>
           </div>
           <div class="av_pic">
@@ -87,13 +87,13 @@
 
     <!-- Notepad UI -->
     <div id="notepad" class="hidden">
-      <div class="notepad-header">
-        <span class="notepad-title">Thankyou - Notepad</span>
+      <div class="notepad_header">
+        <span class="notepad_title">Thankyou - Notepad</span>
       </div>
-      <textarea class="notepad-content">thanks for playing</textarea>
+      <textarea class="notepad_content">thanks for playing</textarea>
     </div>
 
-    <div id="fullscreen-message" class="fullscreen-hidden">
+    <div id="fullscreen_message" class="fullscreen_hidden">
       <h1>: &#40;</h1>
       <h2>All error windows have not been removed. Press f5 to restart</h2>
     </div>
@@ -101,26 +101,26 @@
     <!-- Bottom Taskbar Area -->
     <div id="taskbar">
       <!-- button click to see the modal on the left. -->
-      <div class="taskbar__start" id="start-win">
-        <img src="assets/icons/start.png" alt="Start" class="taskbar__icon" />
+      <div class="taskbar_start" id="start_win">
+        <img src="assets/icons/start.png" alt="Start" class="taskbar_icon" />
         <span>Start</span>
       </div>
 
       <!-- Volume control modals and clock zones. -->
-      <div class="taskbar__right" id="taskbar__right">
+      <div class="taskbar_right" id="taskbar_right">
         <img
           src="assets/icons/volume-1.svg"
           alt="App 1"
-          class="taskbar__volume"
-          id="taskbar__volume"
+          class="taskbar_volume"
+          id="taskbar_volume"
         />
-        <div class="clock_div"><div class="taskbar__clock">12:00 PM</div></div>
+        <div class="clock_div"><div class="taskbar_clock">12:00 PM</div></div>
       </div>
     </div>
 
     <!-- modals-->
     <!-- volume modal-->
-    <div class="volume-control" id="start-volume">
+    <div class="volume_control" id="start_volume">
       <div class="volume_text">
         <label for="volumeSlider">Volume</label>
       </div>
@@ -130,33 +130,33 @@
     </div>
 
     <!-- playlist modal-->
-    <div class="start-window-fade hidden-start" id="start-window-fade"></div>
-    <div class="start-window hidden-start" id="start-window">
-      <div class="fluid-container" id="container-start">
+    <div class="start_window-fade hidden_start" id="start_window-fade"></div>
+    <div class="start_window hidden_start" id="start_window">
+      <div class="fluid_container" id="container_start">
         <div class="col-xs-3 first-column">
-          <div class="wrap-scroll">
-            <div class="head-med">
+          <div class="wrap_scroll">
+            <div class="head_med">
               <small>Playlist</small>
             </div>
             <div id="superhero" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <img
-                  class="media-object"
+                  class="media_object"
                   src="./assets/backgrounds/superhero.jpg"
                   width="35"
                   height="35"
                   alt="..."
                 />
               </div>
-              <div class="media-body">
-                <small class="media-heading">SUPERHERO</small>
+              <div class="media_body">
+                <small class="media_heading">SUPERHERO</small>
               </div>
             </div>
             <div id="ourfuturewithyou" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <a href="#">
                   <img
-                    class="media-object"
+                    class="media_object"
                     src="./assets/backgrounds/ourfuturewithyou.jpg"
                     width="35"
                     height="35"
@@ -164,15 +164,15 @@
                   />
                 </a>
               </div>
-              <div class="media-body">
-                <small class="media-heading">いつか君と話したミライは</small>
+              <div class="media_body">
+                <small class="media_heading">いつか君と話したミライは</small>
               </div>
             </div>
             <div id="futurenote" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <a href="#">
                   <img
-                    class="media-object"
+                    class="media_object"
                     src="./assets/backgrounds/futurenote.jpg"
                     width="35"
                     height="35"
@@ -180,15 +180,15 @@
                   />
                 </a>
               </div>
-              <div class="media-body">
-                <small class="media-heading">フューチャーノーツ</small>
+              <div class="media_body">
+                <small class="media_heading">フューチャーノーツ</small>
               </div>
             </div>
             <div id="miraisymphony" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <a href="#">
                   <img
-                    class="media-object"
+                    class="media_object"
                     src="./assets/backgrounds/miraisymphony.jpg"
                     width="35"
                     height="35"
@@ -196,15 +196,15 @@
                   />
                 </a>
               </div>
-              <div class="media-body">
-                <small class="media-heading">未来交響曲</small>
+              <div class="media_body">
+                <small class="media_heading">未来交響曲</small>
               </div>
             </div>
             <div id="reality" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <a href="#">
                   <img
-                    class="media-object"
+                    class="media_object"
                     src="./assets/backgrounds/reality.jpg"
                     width="35"
                     height="35"
@@ -212,15 +212,15 @@
                   />
                 </a>
               </div>
-              <div class="media-body">
-                <small class="media-heading">リアリティ</small>
+              <div class="media_body">
+                <small class="media_heading">リアリティ</small>
               </div>
             </div>
             <div id="themarks" class="media">
-              <div class="media-left">
+              <div class="media_left">
                 <a href="#">
                   <img
-                    class="media-object"
+                    class="media_object"
                     src="./assets/backgrounds/themarks.jpg"
                     width="35"
                     height="35"
@@ -228,8 +228,8 @@
                   />
                 </a>
               </div>
-              <div class="media-body">
-                <small class="media-heading">The Marks</small>
+              <div class="media_body">
+                <small class="media_heading">The Marks</small>
               </div>
             </div>
           </div>

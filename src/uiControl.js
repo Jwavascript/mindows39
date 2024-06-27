@@ -1,25 +1,25 @@
 import { makeDraggable } from "./draggable";
 
-document.getElementById("start-win").onclick = function () {
+document.getElementById("start_win").onclick = function () {
   "use strict";
-  if (document.getElementById("start-window-fade").style.opacity <= 0.1) {
-    fadeInByMe(document.getElementById("start-window-fade"));
-    fadeInByMe(document.getElementById("start-window"));
-  } else if (document.getElementById("start-window-fade").style.opacity >= 1) {
-    fadeOutByMe(document.getElementById("start-window-fade"));
-    fadeOutByMe(document.getElementById("start-window"));
+  if (document.getElementById("start_window-fade").style.opacity <= 0.1) {
+    fadeInByMe(document.getElementById("start_window-fade"));
+    fadeInByMe(document.getElementById("start_window"));
+  } else if (document.getElementById("start_window-fade").style.opacity >= 1) {
+    fadeOutByMe(document.getElementById("start_window-fade"));
+    fadeOutByMe(document.getElementById("start_window"));
   }
 };
 
-document.getElementById("start-window-fade").onclick = function () {
+document.getElementById("start_window-fade").onclick = function () {
   "use strict";
-  fadeOutByMe(document.getElementById("start-window-fade"));
-  fadeOutByMe(document.getElementById("start-window"));
+  fadeOutByMe(document.getElementById("start_window-fade"));
+  fadeOutByMe(document.getElementById("start_window"));
 };
 
 // volume modal onclick
-document.getElementById("taskbar__right").onclick = function () {
-  let element = document.getElementById("start-volume");
+document.getElementById("taskbar_right").onclick = function () {
+  let element = document.getElementById("start_volume");
   if (element.style.display == "none") element.style.display = "block";
   else element.style.display = "none";
   console.log("hello world");
@@ -47,7 +47,7 @@ document.querySelector(".av_close").addEventListener("touchstart", () => {
 //notepad
 makeDraggable(
   document.getElementById("notepad"),
-  document.querySelector(".notepad-header")
+  document.querySelector(".notepad_header")
 );
 function fadeOutByMe(element) {
   "use strict";
@@ -57,7 +57,7 @@ function fadeOutByMe(element) {
         clearInterval(timer);
         element.style.display = "none";
         document
-          .getElementById("container-start")
+          .getElementById("container_start")
           .classList.remove("activecontainer");
       }
       element.style.opacity = opacity;
@@ -74,7 +74,7 @@ function fadeInByMe(element) {
       }
       if (opacity >= 0.5) {
         document
-          .getElementById("container-start")
+          .getElementById("container_start")
           .classList.add("activecontainer");
       }
       element.style.opacity = opacity;

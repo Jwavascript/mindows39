@@ -2,7 +2,7 @@ import { player } from "./playerControl.js";
 import { getCount } from "./animation.js";
 
 export function updateProgressBar() {
-  const progressBar = document.getElementById("progress-bar");
+  const progressBar = document.getElementById("progress_bar");
   if (!progressBar) return;
 
   const maxTime = player.video.lastPhrase.endTime + 1000;
@@ -13,7 +13,7 @@ export function updateProgressBar() {
 
   if (currentTime >= maxTime && getCount() < player.video.phrases.length - 1) {
     document
-      .getElementById("fullscreen-message")
+      .getElementById("fullscreen_message")
       .classList.add("fullscreen-visible");
   } else if (
     currentTime >= maxTime &&
