@@ -24,6 +24,10 @@ document.getElementById("taskbar_right").onclick = function () {
   else element.style.display = "none";
   console.log("hello world");
 };
+document.querySelector("#container").onclick = function () {
+  let element = document.getElementById("start_volume");
+  element.style.display = "none";
+};
 
 // antivirus icon onclick
 document.getElementById("antivirus").onclick = function () {
