@@ -20,6 +20,6 @@ export function updateProgressBar() {
     getCount() >= player.video.phrases.length - 1
   ) {
     document.getElementById("notepad").style.display = "block";
-    document.getElementById("letter").style.display = "block";
+    document.getElementById("mail").style.display = "block";
   }
 }

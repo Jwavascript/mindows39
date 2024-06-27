@@ -9,6 +9,8 @@ export const player = new Player({
   mediaElement: document.querySelector("#media"),
 });
 
+console.log(player);
+
 export function initializePlayer() {
   player.addListener({
     onAppReady,
