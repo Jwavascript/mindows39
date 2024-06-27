@@ -56,6 +56,11 @@ html {
   color: white;
   font-size: 50px;
 }
+.loadertitle :nth-child(2) {
+  color: #39c5bb;
+  font-weight: bold;
+  text-align: center;
+}
 .loader img {
   width: 250px;
   height: 250px;
@@ -104,6 +109,8 @@ html {
   margin: auto;
 }
 #control button div {
+  font-family: pretendard;
+  font-weight: bold;
   text-align: center;
   margin: auto;
 }

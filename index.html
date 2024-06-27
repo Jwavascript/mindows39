@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TextAlive App</title>
+    <title>Mindows 39</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="loader" class="loader">
-      <div class="loadertitle">Mindows 39</div>
+      <div class="loadertitle">
+        <div>Mindows</div>
+        <div>39</div>
+      </div>
       <img src="./assets/images/loader.gif" alt="Loading..." />
     </div>
     <!-- Icons on desktop. Play music, pause, jump, rewind  -->
@@ -16,27 +19,27 @@
     <div id="control">
       <button id="play">
         <img src="assets/icons/play.svg" />
-        <div>Play</div>
+        <div>再生</div>
       </button>
       <button id="jump">
         <img src="assets/icons/jump.svg" />
-        <div>Jump</div>
+        <div>ジャンプ</div>
       </button>
       <button id="pause">
         <img src="assets/icons/pause.svg" />
-        <div>Pause</div>
+        <div>一時停止</div>
       </button>
       <button id="rewind">
         <img src="assets/icons/rewind.svg" />
-        <div>Rewind</div>
+        <div>巻き戻し</div>
       </button>
       <button id="antivirus">
         <img src="assets/icons/antivirus.svg" />
-        <div>Antivirus</div>
+        <div>ウィルス対策</div>
       </button>
       <button id="mail">
         <img src="assets/icons/mail.svg" />
-        <div>Thankyou</div>
+        <div>ありがとう</div>
       </button>
     </div>
 
@@ -63,20 +66,20 @@
 
     <div class="av hidden" id="av">
       <div class="av_header">
-        <span class="av_title">Antivirus</span>
+        <span class="av_title">ウィルス対策</span>
         <button class="av_close">X</button>
       </div>
       <div class="av_body">
-        <div>remaining time...</div>
+        <div>制限時間</div>
         <div class="progress_div">
           <div id="progress_bar"></div>
         </div>
 
         <div class="av_under">
           <div class="av_under_text">
-            <div>total</div>
-            <div id="error_messages">Close error please</div>
-            <div>errors eliminated</div>
+            <div>合計</div>
+            <div id="error_messages">エラーを閉じます</div>
+            <div>エラーが削除されました</div>
           </div>
           <div class="av_pic">
             <img src="assets/images/antivirusmascort.png" class="av_icon" />
@@ -88,14 +91,22 @@
     <!-- Notepad UI -->
     <div id="notepad" class="hidden">
       <div class="notepad_header">
-        <span class="notepad_title">Thankyou - Notepad</span>
+        <span class="notepad_title">ありがとう - Note</span>
       </div>
-      <textarea class="notepad_content">thanks for playing</textarea>
+      <textarea class="notepad_content">
+おかげさまで、すべてのエラーを正常に削除しました。 
+        最後まで一緒にいてくれてありがとう。 いい時間になったことを願っています
+        
+        もう一度最初から始めるには、ページを更新してください。</textarea
+      >
     </div>
 
     <div id="fullscreen_message" class="fullscreen_hidden">
       <h1>: &#40;</h1>
-      <h2>All error windows have not been removed. Press f5 to restart</h2>
+      <h2>
+        すべてのエラーウィンドウは削除されていない。 再起動するには f5
+        を押します
+      </h2>
     </div>
 
     <!-- Bottom Taskbar Area -->
@@ -103,7 +114,7 @@
       <!-- button click to see the modal on the left. -->
       <div class="taskbar_start" id="start_win">
         <img src="assets/icons/start.png" alt="Start" class="taskbar_icon" />
-        <span>Start</span>
+        <span>スタート</span>
       </div>
 
       <!-- Volume control modals and clock zones. -->
@@ -125,7 +136,14 @@
         <label for="volumeSlider">Volume</label>
       </div>
       <div class="volume_slider">
-        <input id="volumeSlider" type="range" min="0" max="1" step=".001" />
+        <input
+          id="volumeSlider"
+          type="range"
+          min="0"
+          max="1"
+          value="1"
+          step=".001"
+        />
       </div>
     </div>
 
@@ -136,7 +154,7 @@
         <div class="col-xs-3 first-column">
           <div class="wrap_scroll">
             <div class="head_med">
-              <small>Playlist</small>
+              <small>プレイリスト</small>
             </div>
             <div id="superhero" class="media">
               <div class="media_left">
