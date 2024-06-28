@@ -6,6 +6,7 @@ import { updateProgressBar } from "./src/progressBar.js";
 import "./src/eventHandlers.js"; // Event handlers will initialize   themselves
 import "./src/uiControl.js"; // UI controls will initialize themselves
 import "./src/selectHandlers.js";
+import "./src/terminalMessage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   showLoader();

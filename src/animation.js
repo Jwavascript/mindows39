@@ -1,5 +1,6 @@
 import { makeDraggable } from "./draggable.js";
 import { updateAvMessage } from "./avMessage.js";
+import { updateTerminal } from "./terminalMessage.js";
 
 export let count = 0;
 
@@ -36,12 +37,14 @@ export function animatePhrase(now, unit, player) {
         newWindow.remove();
         count++;
         updateAvMessage(player); // updateAvMessage에 player 전달
+        updateTerminal();
       });
 
       okButton.addEventListener("touchstart", () => {
         newWindow.remove();
         count++;
         updateAvMessage(player); // updateAvMessage에 player 전달
+        updateTerminal();
       });
 
       lastPhraseText = currentText;
