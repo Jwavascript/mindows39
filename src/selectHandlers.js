@@ -26,20 +26,19 @@ superheroDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("./assets/backgrounds/superhero.jpg")';
+    body.style.backgroundImage = 'url("assets/backgrounds/superhero.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#00A7C1";
 
-    document.querySelector("#play > img").src = "./assets/icons/play_black.svg";
-    document.querySelector("#pause > img").src =
-      "./assets/icons/pause_black.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump_black.svg";
+    document.querySelector("#play > img").src = "assets/icons/play_black.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause_black.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump_black.svg";
     document.querySelector("#rewind > img").src =
-      "./assets/icons/rewind_black.svg";
+      "assets/icons/rewind_black.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus_black.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail_black.svg";
+      "assets/icons/antivirus_black.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail_black.svg";
 
     document.querySelector("#taskbar").style.backgroundColor = "#F56C11";
     hideLoader();
@@ -69,19 +68,19 @@ ourfuturewithyouDiv.addEventListener("click", () => {
 
     const body = document.querySelector("body");
     body.style.backgroundImage =
-      'url("./assets/backgrounds/ourfuturewithyou.jpg")';
+      'url("assets/backgrounds/ourfuturewithyou.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
 
-    document.querySelector("#play > img").src = "./assets/icons/play_white.svg";
+    document.querySelector("#play > img").src = "/assets/icons/play_white.svg";
     document.querySelector("#pause > img").src =
-      "./assets/icons/pause_white.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump_white.svg";
+      "/assets/icons/pause_white.svg";
+    document.querySelector("#jump > img").src = "/assets/icons/jump_white.svg";
     document.querySelector("#rewind > img").src =
-      "./assets/icons/rewind_white.svg";
+      "/assets/icons/rewind_white.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus_white.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail_white.svg";
+      "/assets/icons/antivirus_white.svg";
+    document.querySelector("#mail > img").src = "/assets/icons/mail_white.svg";
     body.style.backgroundColor = "#08498B";
 
     document.querySelector("#taskbar").style.backgroundColor = "#08134B";
@@ -111,18 +110,18 @@ futurenoteDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("./assets/backgrounds/futurenote.jpg")';
+    body.style.backgroundImage = 'url("assets/backgrounds/futurenote.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#66619E";
 
-    document.querySelector("#play > img").src = "./assets/icons/play.svg";
-    document.querySelector("#pause > img").src = "./assets/icons/pause.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump.svg";
-    document.querySelector("#rewind > img").src = "./assets/icons/rewind.svg";
+    document.querySelector("#play > img").src = "assets/icons/play.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump.svg";
+    document.querySelector("#rewind > img").src = "assets/icons/rewind.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail.svg";
+      "assets/icons/antivirus.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail.svg";
 
     document.querySelector("#taskbar").style.backgroundColor = "#C960B5";
     hideLoader();
