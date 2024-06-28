@@ -1,24 +1,25 @@
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
-  src: url("assets/fonts/pretendard/PretendardJP-Bold.woff2") format("woff2");
+  src: url("/assets/fonts/pretendard/PretendardJP-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
-  src: url("assets/fonts/pretendard/PretendardJP-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/pretendard/PretendardJP-Medium.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
-  src: url("assets/fonts/pretendard/PretendardJP-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/pretendard/PretendardJP-Regular.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
-  src: url("assets/fonts/pretendard/PretendardJP-Light.woff2") format("woff2");
+  src: url("/assets/fonts/pretendard/PretendardJP-Light.woff2") format("woff2");
 }
 
 /* 기본 스타일 초기화 및 설정 */
@@ -31,7 +32,7 @@ html {
   overflow: hidden;
   font-family: "Pretendard";
   background-color: #000;
-  background: url("assets/backgrounds/themarks.jpg") no-repeat center center
+  background: url("/assets/backgrounds/themarks.jpg") no-repeat center center
     #000;
   background-size: contain;
 }
