@@ -72,15 +72,15 @@ ourfuturewithyouDiv.addEventListener("click", () => {
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
 
-    document.querySelector("#play > img").src = "/assets/icons/play_white.svg";
-    document.querySelector("#pause > img").src =
-      "/assets/icons/pause_white.svg";
-    document.querySelector("#jump > img").src = "/assets/icons/jump_white.svg";
+    document.querySelector("#play > img").src =
+      "https://jolly-duckanoo-52ac00.netlify.app/assets/icons/play_white.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause_white.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump_white.svg";
     document.querySelector("#rewind > img").src =
-      "/assets/icons/rewind_white.svg";
+      "assets/icons/rewind_white.svg";
     document.querySelector("#antivirus > img").src =
-      "/assets/icons/antivirus_white.svg";
-    document.querySelector("#mail > img").src = "/assets/icons/mail_white.svg";
+      "assets/icons/antivirus_white.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail_white.svg";
     body.style.backgroundColor = "#08498B";
 
     document.querySelector("#taskbar").style.backgroundColor = "#08134B";
@@ -151,18 +151,17 @@ miraisymphonyDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage =
-      'url("./assets/backgrounds/miraisymphony.jpg")';
+    body.style.backgroundImage = 'url("assets/backgrounds/miraisymphony.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
 
-    document.querySelector("#play > img").src = "./assets/icons/play.svg";
-    document.querySelector("#pause > img").src = "./assets/icons/pause.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump.svg";
-    document.querySelector("#rewind > img").src = "./assets/icons/rewind.svg";
+    document.querySelector("#play > img").src = "assets/icons/play.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump.svg";
+    document.querySelector("#rewind > img").src = "assets/icons/rewind.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail.svg";
+      "assets/icons/antivirus.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail.svg";
     body.style.backgroundColor = "#E9DBD2";
 
     document.querySelector("#taskbar").style.backgroundColor = "#44507F";
@@ -193,18 +192,18 @@ realityDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("./assets/backgrounds/reality.jpg")';
+    body.style.backgroundImage = 'url("assets/backgrounds/reality.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#FFE3C4";
 
-    document.querySelector("#play > img").src = "./assets/icons/play.svg";
-    document.querySelector("#pause > img").src = "./assets/icons/pause.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump.svg";
-    document.querySelector("#rewind > img").src = "./assets/icons/rewind.svg";
+    document.querySelector("#play > img").src = "assets/icons/play.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump.svg";
+    document.querySelector("#rewind > img").src = "assets/icons/rewind.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail.svg";
+      "assets/icons/antivirus.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail.svg";
 
     document.querySelector("#taskbar").style.backgroundColor = "#5C5F56";
     hideLoader();
@@ -234,18 +233,18 @@ themarksDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    body.style.backgroundImage = 'url("./assets/backgrounds/themarks.jpg")';
+    body.style.backgroundImage = 'url("assets/backgrounds/themarks.jpg")';
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#000000";
 
-    document.querySelector("#play > img").src = "./assets/icons/play.svg";
-    document.querySelector("#pause > img").src = "./assets/icons/pause.svg";
-    document.querySelector("#jump > img").src = "./assets/icons/jump.svg";
-    document.querySelector("#rewind > img").src = "./assets/icons/rewind.svg";
+    document.querySelector("#play > img").src = "assets/icons/play.svg";
+    document.querySelector("#pause > img").src = "assets/icons/pause.svg";
+    document.querySelector("#jump > img").src = "assets/icons/jump.svg";
+    document.querySelector("#rewind > img").src = "assets/icons/rewind.svg";
     document.querySelector("#antivirus > img").src =
-      "./assets/icons/antivirus.svg";
-    document.querySelector("#mail > img").src = "./assets/icons/mail.svg";
+      "assets/icons/antivirus.svg";
+    document.querySelector("#mail > img").src = "assets/icons/mail.svg";
 
     document.querySelector("#taskbar").style.backgroundColor = "#4A929A";
     hideLoader();

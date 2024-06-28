@@ -31,7 +31,7 @@ html {
   overflow: hidden;
   font-family: "Pretendard";
   background-color: #000;
-  background: url("./assets/backgrounds/themarks.jpg") no-repeat center center
+  background: url("assets/backgrounds/themarks.jpg") no-repeat center center
     #000;
   background-size: contain;
 }
