@@ -47,15 +47,10 @@ svg {
   0% {
     filter: none;
   }
-  20% {
+  50% {
     filter: url(#filter);
   }
-  50% {
-    filter: url(#filter-2);
-  }
-  80% {
-    filter: url(#filter-3);
-  }
+
   94% {
     filter: none;
   }
@@ -63,7 +58,7 @@ svg {
 
 #my-image {
   filter: url(#filter);
-  animation: 3s my-animation alternate infinite;
+  animation: 10s my-animation alternate infinite;
 }
 
 /* bootscreen loader */

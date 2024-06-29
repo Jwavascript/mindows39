@@ -1,7 +1,7 @@
 import { player } from "./playerControl.js";
-import { updateAvMessage } from "./avMessage.js";
 import { showLoader, hideLoader } from "./loaderFunctions.js";
 import { setCount } from "./animation.js";
+import { updateAvMessage } from "./avMessage.js";
 
 const superheroDiv = document.getElementById("superhero");
 superheroDiv.addEventListener("click", () => {
@@ -48,6 +48,7 @@ superheroDiv.addEventListener("click", () => {
 const ourfuturewithyouDiv = document.getElementById("ourfuturewithyou");
 ourfuturewithyouDiv.addEventListener("click", () => {
   player.requestPause();
+  document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
   player.createFromSongUrl("https://piapro.jp/t/--OD/20240202150903", {
@@ -89,8 +90,10 @@ ourfuturewithyouDiv.addEventListener("click", () => {
 });
 
 const futurenoteDiv = document.getElementById("futurenote");
+
 futurenoteDiv.addEventListener("click", () => {
   player.requestPause();
+  document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
   player.createFromSongUrl("https://piapro.jp/t/XiaI/20240201203346", {
@@ -133,6 +136,7 @@ futurenoteDiv.addEventListener("click", () => {
 const miraisymphonyDiv = document.getElementById("miraisymphony");
 miraisymphonyDiv.addEventListener("click", () => {
   player.requestPause();
+  document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
   showLoader();
@@ -175,6 +179,7 @@ miraisymphonyDiv.addEventListener("click", () => {
 const realityDiv = document.getElementById("reality");
 realityDiv.addEventListener("click", () => {
   player.requestPause();
+  document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
   player.createFromSongUrl("https://piapro.jp/t/ELIC/20240130010349", {
@@ -236,7 +241,6 @@ themarksDiv.addEventListener("click", () => {
     const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
-
     const body = document.querySelector("body");
     const image = document.querySelector(".Playground__svg image");
     image.setAttribute("xlink:href", "assets/backgrounds/themarks.jpg");
