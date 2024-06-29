@@ -1,37 +1,64 @@
 import { getCount } from "./animation.js";
 
+const template = document.querySelector("#terminal_template");
+
+const clone = template.content.cloneNode(true);
+
+const newWindow = clone.querySelector("#terminal");
+
+newWindow.style.position = "absolute";
+
 export function updateTerminal() {
   var data = [
     {
       action: "type",
-      strings: ["npm install -g mimik^400"],
-      output: '<span class="gray">+mimik@0.10.2 installed</span><br>&nbsp;',
-      postDelay: 1000,
+      strings: ["TASKKILL /F mikuvirus.exe"],
+      output:
+        '<span class="gray">Success : process "mikuvirus.exe" (PID 3939) terminated</span><br>&nbsp;',
+      postDelay: 500,
     },
     {
       action: "type",
-      strings: ["cd tests^400"],
+      strings: ["cd "],
       output: " ",
-      postDelay: 1000,
+      postDelay: 500,
     },
     {
       action: "type",
-      strings: ["mimik run^400"],
-      output: document.querySelector(".mimik-run-output").innerHTML,
-    },
-    {
-      action: "type",
-      strings: ["that was easy!", ""],
-      postDelay: 2000,
+      strings: ["mikuvaccine run"],
+      output: document.querySelector(".miku-run-output").innerHTML,
     },
   ];
 
   // Call getCount and check if the returned value is 10
   const count = getCount();
   console.log(count);
-  if (count === 10) {
-    document.getElementById("terminal").style.display = "block";
+
+  if (count == 10) {
+    console.log("inin");
+    document.querySelector("body").appendChild(newWindow);
     runScripts(data, 0);
+    document.querySelector(".Playground__svg image").removeAttribute("id");
+  }
+  if (count == 20) {
+    document.querySelector("body").appendChild(newWindow);
+    runScripts(data, 0);
+    var newerror = `<div class="window">
+        <div class="window_header">
+          <span class="window_title">Error</span>
+          <button class="window_close" data-ok>X</button>
+        </div>
+        <div class="window_body">
+          <img
+            class="window_body_icon"
+            src="assets/images/errormiku.png"
+            width="50"
+            height="50"
+          />
+          <div class="window_body_text" data-glitch="glitch"></div>
+        </div>
+      </div>`;
+    document.querySelector("#error_window_template").innerHTML = newerror;
   }
 }
 
@@ -80,7 +107,7 @@ function runScripts(data, pos) {
         if (pos >= data.length) {
           const terminal_ui = document.querySelector("#terminal");
           setTimeout(function () {
-            terminal_ui.remove();
+            newWindow.remove();
           }, 1000);
         }
       }

@@ -9,9 +9,9 @@ import "./src/selectHandlers.js";
 import "./src/terminalMessage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  showLoader();
-  setTimeout(hideLoader, 2000);
   initializePlayer();
+  showLoader();
+  setTimeout(hideLoader, 5000);
   updateClock();
   setInterval(updateClock, 60000);
   setInterval(updateProgressBar, 1000);

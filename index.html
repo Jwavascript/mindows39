@@ -7,6 +7,83 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <svg class="Playground__svg" viewBox="0 0 400 500">
+      <defs>
+        <filter
+          id="filter"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          filterUnits="objectBoundingBox"
+          primitiveUnits="userSpaceOnUse"
+          color-interpolation-filters="linearRGB"
+        >
+          <feMorphology
+            operator="dilate"
+            radius="10 0"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="SourceGraphic"
+            result="morphology1"
+          ></feMorphology>
+        </filter>
+        <filter
+          id="filter-2"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          filterUnits="objectBoundingBox"
+          primitiveUnits="userSpaceOnUse"
+          color-interpolation-filters="linearRGB"
+        >
+          <feMorphology
+            operator="dilate"
+            radius="10 2"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="SourceGraphic"
+            result="morphology1"
+          ></feMorphology>
+        </filter>
+        <filter
+          id="filter-3"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          filterUnits="objectBoundingBox"
+          primitiveUnits="userSpaceOnUse"
+          color-interpolation-filters="linearRGB"
+        >
+          <feMorphology
+            operator="dilate"
+            radius="15 0"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="SourceGraphic"
+            result="morphology1"
+          ></feMorphology>
+        </filter>
+      </defs>
+
+      <!-- 	go ahead and change the image and make it your own -->
+      <image
+        x="0%"
+        y="0%"
+        width="400"
+        height="500"
+        preserveAspectRatio="xMidYMid slice"
+        xlink:href="/assets/backgrounds/themarks.jpg"
+      ></image>
+    </svg>
     <div id="loader" class="loader">
       <div class="loadertitle">
         <div>Mindows</div>
@@ -80,6 +157,9 @@
             <div>合計</div>
             <div id="error_messages">エラーを閉じます</div>
             <div>エラーが削除されました</div>
+            <div>10 errors removed : 背景のグリッチ効果を削除します</div>
+            <div>20 errors removed : 文字のグリッチ効果を取り除きます</div>
+            <div>制限時間内にすべてのエラーをクリア/クリア失敗 : ???</div>
           </div>
           <div class="av_pic">
             <img src="assets/images/antivirusmascort.png" class="av_icon" />
@@ -89,41 +169,41 @@
     </div>
 
     <!--Terminal UI-->
-    <div id="terminal" class="hidden">
-      <div class="terminal_header">
-        <span class="terminal_title">Terminal</span>
-      </div>
-      <section class="terminal_content">
-        <div class="history"></div>
-        $&nbsp;<span class="prompt"></span>
-        <span class="typed-cursor"></span>
-      </section>
-    </div>
+    <template id="terminal_template">
+      <div id="terminal">
+        <div class="terminal_header">
+          <span class="terminal_title">Terminal</span>
+        </div>
+        <section class="terminal_content">
+          <div class="history"></div>
+          $&nbsp;<span class="prompt"></span>
+          <span class="typed-cursor"></span>
+        </section></div
+    ></template>
 
-    <div class="terminal-data mimik-run-output">
-      <br />Found 1 feature<br />
+    <div class="terminal-data miku-run-output">
+      <br />Found 1 virus<br />
       ----------------------------------------------<br />
-      Feature: Bottles <span class="gray"># ./features/bottles.feature</span
-      ><br /><br />
+      <br /><br />
 
-      &nbsp;&nbsp;Scenario: A bottle falls from the wall<br />
+      &nbsp;&nbsp;this phrase that looks like something<br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
-      <span class="gray">Given 100 green bottles are standing</span><br />
+      <span class="gray">but nothing</span><br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
-      <span class="gray">when 1 green bottle accidentally falls</span><br />
+      <span class="gray">now deleted one error</span><br />
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span>
-      <span class="gray">then there are 99 green bottles standing</span><br />
+      <span class="gray">Please continue to remove other errors</span><br />
       <br />
       <span class="gray"
         >&nbsp;---------- ----------- ------- -------- --------</span
       ><br />
-      &nbsp;&nbsp;Features&nbsp;&nbsp;&nbsp;Scenarios&nbsp;&nbsp;&nbsp;Steps&nbsp;&nbsp;&nbsp;Passed&nbsp;&nbsp;&nbsp;Failed<br />
+      &nbsp;&nbsp;Found&nbsp;&nbsp;&nbsp;Inspected&nbsp;&nbsp;&nbsp;passed&nbsp;&nbsp;&nbsp;deleted&nbsp;&nbsp;&nbsp;Failed<br />
       <span class="gray"
         >&nbsp;---------- ----------- ------- -------- --------</span
       ><br />
-      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
         class="green"
-        >✓ 4</span
+        >✓ 1</span
       >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 <br />
       <br />
       &nbsp;&nbsp;Completed 1 feature in 0.01s<br />
@@ -136,10 +216,8 @@
         <span class="notepad_title">ありがとう - Note</span>
       </div>
       <textarea class="notepad_content">
-おかげさまで、すべてのエラーを正常に削除しました。 
-        最後まで一緒にいてくれてありがとう。 いい時間になったことを願っています
-        
-        もう一度最初から始めるには、ページを更新してください。</textarea
+        おかげさまで、すべてのエラーを正常に削除しました。 
+        最後まで一緒にいてくれてありがとう。 いい時間になったことを願っていますもう一度最初から始めるには、ページを更新してください。</textarea
       >
     </div>
 
