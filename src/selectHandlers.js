@@ -42,7 +42,7 @@ superheroDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#F56C11";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 const ourfuturewithyouDiv = document.getElementById("ourfuturewithyou");
@@ -86,7 +86,7 @@ ourfuturewithyouDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#08134B";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 const futurenoteDiv = document.getElementById("futurenote");
@@ -130,7 +130,7 @@ futurenoteDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#C960B5";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 const miraisymphonyDiv = document.getElementById("miraisymphony");
@@ -173,7 +173,7 @@ miraisymphonyDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#44507F";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 const realityDiv = document.getElementById("reality");
@@ -216,7 +216,7 @@ realityDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#5C5F56";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 const themarksDiv = document.getElementById("themarks");
@@ -258,7 +258,7 @@ themarksDiv.addEventListener("click", () => {
 
     document.querySelector("#taskbar").style.backgroundColor = "#4A929A";
     hideLoader();
-  }, 5000);
+  }, 500);
 });
 
 export {

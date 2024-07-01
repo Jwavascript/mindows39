@@ -2,19 +2,11 @@ import { makeDraggable } from "./draggable";
 
 document.getElementById("start_win").onclick = function () {
   "use strict";
-  if (document.getElementById("start_window-fade").style.opacity <= 0.1) {
-    fadeInByMe(document.getElementById("start_window-fade"));
+  if (document.getElementById("start_window").style.opacity <= 0.1) {
     fadeInByMe(document.getElementById("start_window"));
-  } else if (document.getElementById("start_window-fade").style.opacity >= 1) {
-    fadeOutByMe(document.getElementById("start_window-fade"));
+  } else if (document.getElementById("start_window").style.opacity >= 1) {
     fadeOutByMe(document.getElementById("start_window"));
   }
-};
-
-document.getElementById("start_window-fade").onclick = function () {
-  "use strict";
-  fadeOutByMe(document.getElementById("start_window-fade"));
-  fadeOutByMe(document.getElementById("start_window"));
 };
 
 // volume modal onclick
@@ -25,6 +17,7 @@ document.getElementById("taskbar_right").onclick = function () {
   console.log("hello world");
 };
 document.querySelector("#container").onclick = function () {
+  fadeOutByMe(document.getElementById("start_window"));
   let element = document.getElementById("start_volume");
   element.style.display = "none";
 };

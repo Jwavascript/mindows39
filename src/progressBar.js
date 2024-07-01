@@ -6,17 +6,17 @@ export function updateProgressBar() {
   if (!progressBar) return;
 
   const maxTime = player.video.lastPhrase.endTime + 1000;
-  const currentTime = Math.min(player.timer.position, maxTime);
+  const currentTime = player.timer.position;
   const percentage = Math.floor((currentTime / maxTime) * 100);
 
-  progressBar.style.width = `${percentage}%`;
+  progressBar.style.width = `${Math.min(percentage, 100)}%`;
 
-  if (currentTime >= maxTime && getCount() < player.video.phrases.length - 1) {
+  if (currentTime > maxTime && getCount() < player.video.phrases.length - 1) {
     document
       .getElementById("fullscreen_message")
       .classList.add("fullscreen-visible");
   } else if (
-    currentTime >= maxTime &&
+    currentTime > maxTime &&
     getCount() >= player.video.phrases.length - 1
   ) {
     document.getElementById("notepad").style.display = "block";

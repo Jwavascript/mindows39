@@ -129,8 +129,8 @@ svg {
   z-index: 2; /* 다른 요소 위로 버튼을 올림 */
 }
 #control button img {
-  width: 100%;
-  height: 100%;
+  width: 5vh;
+  height: 5vh;
   margin: auto;
 }
 #control button div {
