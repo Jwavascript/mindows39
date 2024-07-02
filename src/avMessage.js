@@ -1,11 +1,12 @@
 import { getCount } from "./animation";
 
+// update Antivirus Ui Textarea
 export function updateAvMessage(player) {
-  const phrasesLength = player.video.phrases.length - 1;
+  const phrasesLength = player.video.phrases.length;
   const avContainer = document.getElementById("error_messages");
   avContainer.innerHTML = "";
-  console.log(getCount());
-  const avMessage = `${getCount()} / ${phrasesLength}`; // player.video.phrases.length 사용
+
+  const avMessage = `${getCount()} / ${phrasesLength}`;
   const avElement = document.createElement("div");
   avElement.textContent = avMessage;
   avContainer.appendChild(avElement);

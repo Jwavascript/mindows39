@@ -9,8 +9,6 @@ export const player = new Player({
   mediaElement: document.querySelector("#media"),
 });
 
-console.log(player);
-
 export function initializePlayer() {
   player.addListener({
     onAppReady,
@@ -36,7 +34,7 @@ function onAppReady(app) {
 
 function onTimerReady() {
   let p = player.video.firstPhrase;
-  while (p && p.next) {
+  while (p) {
     p.animate = (now, unit) => animatePhrase(now, unit, player); // animatePhrase에 player 인스턴스를 전달
     p = p.next;
   }
@@ -47,9 +45,6 @@ function onTimeUpdate(position) {
   if (!beat) {
     return;
   }
-  document.querySelector("#beatbar").style.width = `${Math.ceil(
-    Ease.circIn(beat.progress(position)) * 100
-  )}%`;
 }
 
 function onThrottledTimeUpdate(position) {
