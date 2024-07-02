@@ -2,6 +2,8 @@ import { makeDraggable } from "./draggable.js";
 import { updateAvMessage } from "./avMessage.js";
 import { updateTerminal } from "./terminalMessage.js";
 
+// handle functions about lyric error window
+
 export let count = 0;
 
 let lastPhraseText = "";
@@ -9,7 +11,10 @@ let lastPhraseText = "";
 export function animatePhrase(now, unit, player) {
   if (unit.contains(now)) {
     const currentText = unit.text;
-    console.log(currentText);
+
+    if (now > player.video.firstPhrase.endTime && lastPhraseText == "") {
+      currentText = "";
+    }
 
     if (currentText !== lastPhraseText) {
       const template = document.querySelector("#error_window_template");
@@ -58,4 +63,8 @@ export function getCount() {
 
 export function setCount(newcount) {
   count = newcount;
+}
+
+export function resetPhrase() {
+  lastPhraseText = "";
 }

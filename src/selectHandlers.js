@@ -2,10 +2,12 @@ import { player } from "./playerControl.js";
 import { showLoader, hideLoader } from "./loaderFunctions.js";
 import { setCount } from "./animation.js";
 import { updateAvMessage } from "./avMessage.js";
+import { resetPhrase } from "./animation.js";
 
 const superheroDiv = document.getElementById("superhero");
 superheroDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
   player.createFromSongUrl("https://piapro.jp/t/hZ35/20240130103028", {
@@ -47,7 +49,8 @@ superheroDiv.addEventListener("click", () => {
 
 const ourfuturewithyouDiv = document.getElementById("ourfuturewithyou");
 ourfuturewithyouDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -92,7 +95,7 @@ ourfuturewithyouDiv.addEventListener("click", () => {
 const futurenoteDiv = document.getElementById("futurenote");
 
 futurenoteDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -135,7 +138,7 @@ futurenoteDiv.addEventListener("click", () => {
 
 const miraisymphonyDiv = document.getElementById("miraisymphony");
 miraisymphonyDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -178,7 +181,7 @@ miraisymphonyDiv.addEventListener("click", () => {
 
 const realityDiv = document.getElementById("reality");
 realityDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -221,7 +224,7 @@ realityDiv.addEventListener("click", () => {
 
 const themarksDiv = document.getElementById("themarks");
 themarksDiv.addEventListener("click", () => {
-  player.requestPause();
+  player.requestStop();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
