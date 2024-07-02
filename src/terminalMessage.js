@@ -41,6 +41,7 @@ export function updateTerminal() {
   if (count == 20) {
     document.querySelector("body").appendChild(newWindow);
     runScripts(data, 0);
+    // new error template, not glitching text
     var newerror = `<div class="window">
         <div class="window_header">
           <span class="window_title">Error</span>
