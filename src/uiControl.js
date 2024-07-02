@@ -1,5 +1,6 @@
 import { makeDraggable } from "./draggable";
 
+// Playlist modal On and Off
 document.getElementById("start_win").onclick = function () {
   "use strict";
   if (document.getElementById("start_window").style.opacity <= 0.1) {
@@ -9,12 +10,11 @@ document.getElementById("start_win").onclick = function () {
   }
 };
 
-// volume modal onclick
+// Volume modal On and Off
 document.getElementById("taskbar_right").onclick = function () {
   let element = document.getElementById("start_volume");
   if (element.style.display == "none") element.style.display = "block";
   else element.style.display = "none";
-  console.log("hello world");
 };
 document.querySelector("#container").onclick = function () {
   fadeOutByMe(document.getElementById("start_window"));
@@ -22,7 +22,7 @@ document.querySelector("#container").onclick = function () {
   element.style.display = "none";
 };
 
-// antivirus icon onclick
+// Antivirus Icon On, Off, draggable
 document.getElementById("antivirus").onclick = function () {
   let element = document.getElementById("av");
   element.style.display = "block";
@@ -41,11 +41,13 @@ document.querySelector(".av_close").addEventListener("touchstart", () => {
   element.style.display = "none";
 });
 
-//notepad
+// make Notepad Ui draagable
 makeDraggable(
   document.getElementById("notepad"),
   document.querySelector(".notepad_header")
 );
+
+//playlist modal fade effect
 function fadeOutByMe(element) {
   "use strict";
   var opacity = 1,

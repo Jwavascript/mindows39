@@ -32,10 +32,8 @@ export function updateTerminal() {
 
   // Call getCount and check if the returned value is 10
   const count = getCount();
-  console.log(count);
 
   if (count == 10) {
-    console.log("inin");
     document.querySelector("body").appendChild(newWindow);
     runScripts(data, 0);
     document.querySelector(".Playground__svg image").removeAttribute("id");
@@ -96,9 +94,8 @@ function runScripts(data, pos) {
             document.querySelector("section.terminal_content").scrollHeight;
           // Run next script
           pos++;
-          console.log(pos);
+
           if (pos < data.length) {
-            console.log("dddd");
             setTimeout(function () {
               runScripts(data, pos);
             }, script.postDelay || 1000);

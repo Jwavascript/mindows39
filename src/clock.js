@@ -1,3 +1,4 @@
+// bottom taskbar clock function
 export function updateClock() {
   const clockEl = document.querySelector(".taskbar_clock");
   const now = new Date();

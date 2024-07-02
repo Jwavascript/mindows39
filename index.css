@@ -1,3 +1,4 @@
+/* add pretendard font family */
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
@@ -22,7 +23,7 @@
   src: url("/assets/fonts/pretendard/PretendardJP-Light.woff2") format("woff2");
 }
 
-/* 기본 스타일 초기화 및 설정 */
+/*basic style css configuration*/
 body,
 html {
   margin: 0;
@@ -32,11 +33,10 @@ html {
   overflow: hidden;
   font-family: "Pretendard";
   background-color: #000;
-  /* background: url("/assets/backgrounds/themarks.jpg") no-repeat center center
-    #000; */
   background-size: contain;
 }
 
+/*glitched wallpaper css*/
 svg {
   height: 100vh;
   width: 100vw;
@@ -61,7 +61,7 @@ svg {
   animation: 10s my-animation alternate infinite;
 }
 
-/* bootscreen loader */
+/* Boot Screen loader css */
 .loader {
   position: fixed;
   top: 0;
@@ -95,19 +95,19 @@ svg {
   display: none;
 }
 
+/* container(containing lyric error modal)*/
 #container {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 50px; /* 작업 표시줄 높이만큼 마진 추가 */
+  bottom: 50px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/*컨트롤 패널 스타일*/
-
+/*Control Panel CSS*/
 #control {
   position: absolute;
   top: 5vh;
@@ -126,7 +126,7 @@ svg {
   flex-direction: column;
   background: none;
   position: relative;
-  z-index: 2; /* 다른 요소 위로 버튼을 올림 */
+  z-index: 2;
 }
 #control button img {
   width: 5vh;
@@ -155,186 +155,7 @@ svg {
   display: none;
 }
 
-/* 작업 표시줄 스타일 */
-#taskbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #4a929a;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.taskbar_start {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.taskbar_icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-}
-
-.taskbar__items {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-}
-.taskbar_right {
-  display: flex;
-  height: 100%;
-}
-
-.taskbar_volume {
-  width: 20px;
-  height: 100%;
-  margin-right: 20px;
-}
-
-.taskbar_start:hover,
-.taskbar_volume:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.taskbar_icon img:hover,
-.taskbar_volume img:hover {
-  filter: brightness(1.2);
-  transition: filter 0.3s ease;
-}
-
-.clock_div {
-  display: flex;
-  align-items: center;
-}
-.taskbar_clock {
-  font-size: 15px;
-  margin-bottom: 2px;
-  margin-right: 20px;
-}
-
-.volume_control {
-  display: none;
-  margin-right: 10px;
-  width: 30vw;
-  height: 120px;
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-  background-color: #d9d9d9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  z-index: 3;
-}
-
-.volume_text {
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-
-.volume_slider {
-  text-align: center;
-}
-
-#volumeSlider {
-  width: 80%;
-}
-@media (max-width: 700px) {
-  .volume_control {
-    display: none;
-    margin-right: 10px;
-    width: 40vw;
-    height: 120px;
-    position: fixed;
-    right: 0;
-    bottom: 50px;
-    background-color: #d9d9d9;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    z-index: 3;
-  }
-}
-
-/*시작 버튼 누를 시 모달 창 */
-.start_window {
-  color: white;
-  width: 30vw;
-  height: 530px;
-  position: fixed;
-  left: 0;
-  bottom: 50px;
-  background-color: rgba(21, 21, 21, 0.9);
-  transition: all 0.1s ease-in-out;
-  z-index: 3;
-}
-@media (max-width: 700px) {
-  .start_window {
-    width: 50vw;
-    height: 530px;
-    position: fixed;
-    left: 0;
-    bottom: 50px;
-    background-color: rgba(21, 21, 21, 0.9);
-    transition: all 0.1s ease-in-out;
-    z-index: 3;
-  }
-}
-
-.start_window .fluid_container {
-  padding-top: 530px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.start_window .fluid_container.activecontainer {
-  padding-top: 0;
-}
-
-.start_window-fade {
-  position: relative;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.hidden_start {
-  display: none;
-}
-
-.start_window .first-column .head_med {
-  padding: 10px;
-}
-
-.start_window .first-column {
-  height: 530px;
-  overflow: auto;
-}
-
-.start_window .first-column .media_heading {
-  margin-left: 10px;
-  line-height: 35px;
-}
-
-.start_window .first-column .media:hover,
-.start_window .first-column .head_med:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.start_window .first-column .media {
-  margin-top: 0;
-  padding: 10px;
-  display: flex;
-}
-
-/* 윈도우 스타일의 에러 창 */
+/* Error window CSS */
 .window {
   background-color: #000;
   opacity: 0.8;
@@ -401,7 +222,7 @@ svg {
   color: #fff;
   letter-spacing: 4px;
 }
-
+/* Error window text glitching effect */
 .glitch {
   position: relative;
 }
@@ -604,7 +425,7 @@ svg {
   }
 }
 
-/* 안티바이러스 ui */
+/* anti virus program css */
 
 .av {
   position: fixed;
@@ -880,7 +701,7 @@ svg {
   font-size: 14px;
 }
 
-/* 전체 화면 메시지 스타일 */
+/* Bluescreen UI CSS */
 .fullscreen_hidden {
   display: none;
 }
@@ -910,4 +731,183 @@ svg {
 .fullscreen-visible h2 {
   font-size: 4vh;
   margin: 2vh;
+}
+
+/* Bottom Taskbar Area CSS */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #4a929a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.taskbar_start {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar_icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.taskbar__items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+.taskbar_right {
+  display: flex;
+  height: 100%;
+}
+
+.taskbar_volume {
+  width: 20px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.taskbar_start:hover,
+.taskbar_volume:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.taskbar_icon img:hover,
+.taskbar_volume img:hover {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
+}
+
+.clock_div {
+  display: flex;
+  align-items: center;
+}
+.taskbar_clock {
+  font-size: 15px;
+  margin-bottom: 2px;
+  margin-right: 20px;
+}
+/* volume modal CSS */
+.volume_control {
+  display: none;
+  margin-right: 10px;
+  width: 30vw;
+  height: 120px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+.volume_text {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.volume_slider {
+  text-align: center;
+}
+
+#volumeSlider {
+  width: 80%;
+}
+@media (max-width: 700px) {
+  .volume_control {
+    display: none;
+    margin-right: 10px;
+    width: 40vw;
+    height: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+  }
+}
+
+/*playlist modal CSS */
+.start_window {
+  color: white;
+  width: 30vw;
+  height: 530px;
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+  background-color: rgba(21, 21, 21, 0.9);
+  transition: all 0.1s ease-in-out;
+  z-index: 3;
+}
+@media (max-width: 700px) {
+  .start_window {
+    width: 50vw;
+    height: 530px;
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+    background-color: rgba(21, 21, 21, 0.9);
+    transition: all 0.1s ease-in-out;
+    z-index: 3;
+  }
+}
+
+.start_window .fluid_container {
+  padding-top: 530px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.start_window .fluid_container.activecontainer {
+  padding-top: 0;
+}
+
+.start_window-fade {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hidden_start {
+  display: none;
+}
+
+.start_window .first-column .head_med {
+  padding: 10px;
+}
+
+.start_window .first-column {
+  height: 530px;
+  overflow: auto;
+}
+
+.start_window .first-column .media_heading {
+  margin-left: 10px;
+  line-height: 35px;
+}
+
+.start_window .first-column .media:hover,
+.start_window .first-column .head_med:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.start_window .first-column .media {
+  margin-top: 0;
+  padding: 10px;
+  display: flex;
 }

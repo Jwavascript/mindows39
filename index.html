@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- glitched wallpaper -->
     <svg class="Playground__svg" viewBox="0 0 500 500">
       <defs>
         <filter
@@ -32,7 +33,6 @@
         </filter>
       </defs>
 
-      <!-- 	go ahead and change the image and make it your own -->
       <image
         x="0%"
         y="0%"
@@ -42,6 +42,8 @@
         xlink:href="/assets/backgrounds/themarks.jpg"
       ></image>
     </svg>
+
+    <!-- Boot Screen loader-->
     <div id="loader" class="loader">
       <div class="loadertitle">
         <div>Mindows</div>
@@ -50,7 +52,8 @@
       <img src="assets/images/loader.gif" alt="Loading..." />
       <div class="warning"></div>
     </div>
-    <!-- Icons on desktop. Play music, pause, jump, rewind  -->
+
+    <!-- Control Panel. Play music, pause, jump, rewind, etc -->
     <div id="container"></div>
     <div id="control">
       <button id="play">
@@ -99,7 +102,6 @@
     </template>
 
     <!-- anti-virus program ui -->
-
     <div class="av hidden" id="av">
       <div class="av_header">
         <span class="av_title">ウィルス対策</span>
@@ -175,11 +177,14 @@
         <span class="notepad_title">ありがとう - Note</span>
       </div>
       <textarea class="notepad_content">
-        おかげさまで、すべてのエラーを正常に削除しました。 
-        最後まで一緒にいてくれてありがとう。 いい時間になったことを願っていますもう一度最初から始めるには、ページを更新してください。</textarea
+おかげさまで、すべてのエラーを正常に削除しました<br/>
+        最後まで一緒にいてくれてありがとう。<br/>
+        いい時間になったことを願っていますもう一度最初から始めるには、ページを更新してください。
+        </textarea
       >
     </div>
 
+    <!-- BlueScreen UI-->
     <div id="fullscreen_message" class="fullscreen_hidden">
       <h1>: &#40;</h1>
       <h2>
@@ -190,13 +195,13 @@
 
     <!-- Bottom Taskbar Area -->
     <div id="taskbar">
-      <!-- button click to see the modal on the left. -->
+      <!-- playlist modal popup button -->
       <div class="taskbar_start" id="start_win">
         <img src="assets/icons/start.png" alt="Start" class="taskbar_icon" />
         <span>スタート</span>
       </div>
 
-      <!-- Volume control modals and clock zones. -->
+      <!-- Volume control modal popup button & clock -->
       <div class="taskbar_right" id="taskbar_right">
         <img
           src="assets/icons/volume-1.svg"

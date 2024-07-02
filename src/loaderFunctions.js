@@ -1,3 +1,5 @@
+// show or hide loader
+
 export function showLoader() {
   document.getElementById("loader").classList.remove("hidden");
 }
