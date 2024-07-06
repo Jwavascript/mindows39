@@ -3,6 +3,7 @@
 デモ·ページ : [link](https://jolly-duckanoo-52ac00.netlify.app)
 
 ## 1. プロジェクト紹介
+
 プログラムが人間に話しかけると、エラーメッセージの形で表現されます。
 
 このアプリケーションは、パソコンと人間のコミュニケーションを「エラーメッセージ」で表現するユニークな仕組みを持っています。
@@ -15,9 +16,10 @@
 
 ## 2. ローカル実行環境設定
 
-
 ### 実行
+
 [node js](https://nodejs.org/en)がインストールされているコンピューターにこのプロジェクトをクローンしてください
+
 ```
 npm install
 
@@ -25,10 +27,10 @@ npm run dev
 ```
 
 ### ビルド
+
 ```
 npm run build
 ```
-
 
 ## 3. 開発する際に助けられた場所
 
@@ -46,27 +48,22 @@ npm run build
 
 [Windows 10 - Using CSS & JS Only](https://codepen.io/MohamedElGhandour/pen/GEbwEW)
 
-playlistモーダルを作るのに役立った
+playlist モーダルを作るのに役立った
 
 [Animated Terminal Session](https://codepen.io/simoami/pen/eYrPdz)
 
-terminalプログラムのuiを具現するのに役立つ
+terminal プログラムの ui を具現するのに役立つ
 
 [morphology - laptop glitch - dilate](https://codepen.io/janein/pen/LYZEgyK)
 
-svgフィルターを利用してグリッチ効果を出すのに役立つ
+svg フィルターを利用してグリッチ効果を出すのに役立つ
 
-###  Pretendard Font (Sil Open Font License)
+### Pretendard Font (Sil Open Font License)
+
 [Pretendard](https://github.com/orioncactus/pretendard)
 日本語、英語、韓国語に対応したすっきりしたフォント
 
 ### Google Material Symbols & Icons (Apache 2.0 License)
+
 [Google Material Symbols](https://fonts.google.com/icons?icon.size=24&icon.color=%235f6368)
 シンプルなマテリアルデザインのアイコンで、オープンソースだ。
-
-### Dall-E 3
-背景画面、そしてその他のイメージ要素はdalle 3を通じて直接生成した。
-
-
-
-
