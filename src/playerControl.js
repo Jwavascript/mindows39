@@ -1,5 +1,4 @@
 import { Player, Ease } from "textalive-app-api";
-import { contestSongs } from "../contestsong.js";
 import { animatePhrase } from "./animation.js";
 
 export const player = new Player({
@@ -48,9 +47,17 @@ function onTimerReady() {
 }
 
 function onTimeUpdate(position) {
-  const chord = player.findChord(position);
-  console.log(chord);
-  if (!chord) {
-    return;
+  let lastChordText = "";
+  const currentText = player.findChord(position);
+
+  if (currentText !== lastChordText) {
+    document.querySelector(".chord_current").textContent = currentText.name;
+    document.querySelector(".chord_next").textContent = currentText.next.name;
+
+    const chord_progress = document.getElementById("chord_bar");
+    const maxTime = currentText.endTime - currentText.startTime;
+    const currenTime = position - currentText.startTime;
+    const percentage = Math.floor((currenTime / maxTime) * 100);
+    chord_progress.style.width = `${Math.min(percentage, 100)}%`;
   }
 }

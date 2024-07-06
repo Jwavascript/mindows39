@@ -202,6 +202,11 @@
       <!-- Volume control modal popup button & clock -->
       <div class="taskbar_right" id="taskbar_right">
         <img
+          src="assets/icons/chord.svg"
+          class="taskbar_chord"
+          id="taskbar_chord"
+        />
+        <img
           src="assets/icons/volume-1.svg"
           alt="App 1"
           class="taskbar_volume"
@@ -212,6 +217,17 @@
     </div>
 
     <!-- modals-->
+    <!-- chord modal-->
+    <div id="chord_view">
+      <div class="chord_current">None</div>
+      <div class="chord_next">None</div>
+      <div class="bar_container">
+        <div class="chord_progress">
+          <div id="chord_bar"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- volume modal-->
     <div class="volume_control" id="start_volume">
       <div class="volume_text">

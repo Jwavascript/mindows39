@@ -10,8 +10,15 @@ document.getElementById("start_win").onclick = function () {
   }
 };
 
+// chord modal On and Off
+document.getElementById("taskbar_chord").onclick = function () {
+  let element = document.getElementById("chord_view");
+  if (element.style.display == "none") element.style.display = "block";
+  else element.style.display = "none";
+};
+
 // Volume modal On and Off
-document.getElementById("taskbar_right").onclick = function () {
+document.getElementById("taskbar_volume").onclick = function () {
   let element = document.getElementById("start_volume");
   if (element.style.display == "none") element.style.display = "block";
   else element.style.display = "none";
@@ -19,7 +26,9 @@ document.getElementById("taskbar_right").onclick = function () {
 document.querySelector("#container").onclick = function () {
   fadeOutByMe(document.getElementById("start_window"));
   let element = document.getElementById("start_volume");
+  let element2 = document.getElementById("chord_view");
   element.style.display = "none";
+  element2.style.display = "none";
 };
 
 // Antivirus Icon On, Off, draggable
