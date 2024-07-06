@@ -8,40 +8,42 @@
   </head>
   <body>
     <!-- glitched wallpaper -->
-    <svg class="Playground__svg" viewBox="0 0 500 500">
-      <defs>
-        <filter
-          id="filter"
-          x="0%"
-          y="0%"
-          width="100%"
-          height="100%"
-          filterUnits="objectBoundingBox"
-          primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="linearRGB"
-        >
-          <feMorphology
-            operator=""
-            radius="1 1"
+    <div class="svgcontainer">
+      <svg class="Playground__svg" viewBox="0 0 500 500">
+        <defs>
+          <filter
+            id="filter"
             x="0%"
             y="0%"
             width="100%"
             height="100%"
-            in="SourceGraphic"
-            result="morphology1"
-          ></feMorphology>
-        </filter>
-      </defs>
+            filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse"
+            color-interpolation-filters="linearRGB"
+          >
+            <feMorphology
+              operator="erode"
+              radius="3 3"
+              x="0%"
+              y="0%"
+              width="100%"
+              height="100%"
+              in="SourceGraphic"
+              result="morphology1"
+            ></feMorphology>
+          </filter>
+        </defs>
 
-      <image
-        x="0%"
-        y="0%"
-        width="500"
-        height="500"
-        preserveAspectRatio="xMidYMid slice"
-        xlink:href="/assets/backgrounds/themarks.jpg"
-      ></image>
-    </svg>
+        <image
+          x="0%"
+          y="0%"
+          width="500"
+          height="500"
+          preserveAspectRatio="xMidYMid slice"
+          xlink:href="/assets/backgrounds/background.png"
+        ></image>
+      </svg>
+    </div>
 
     <!-- Boot Screen loader-->
     <div id="loader" class="loader">
@@ -92,7 +94,7 @@
         <div class="window_body">
           <img
             class="window_body_icon"
-            src="assets/images/errormiku.png"
+            src="assets/images/warning.svg"
             width="50"
             height="50"
           />
@@ -122,9 +124,7 @@
             <div>20 errors removed : 文字のグリッチ効果を取り除きます</div>
             <div>制限時間内にすべてのエラーをクリア/クリア失敗 : ???</div>
           </div>
-          <div class="av_pic">
-            <img src="assets/images/antivirusmascort.png" class="av_icon" />
-          </div>
+          <div class="av_pic"></div>
         </div>
       </div>
     </div>
@@ -177,9 +177,7 @@
         <span class="notepad_title">ありがとう - Note</span>
       </div>
       <textarea class="notepad_content">
-おかげさまで、すべてのエラーを正常に削除しました<br/>
-        最後まで一緒にいてくれてありがとう。<br/>
-        いい時間になったことを願っていますもう一度最初から始めるには、ページを更新してください。
+おかげさまで、すべてのエラーを正常に削除しました最後まで一緒にいてくれてありがとう。いい時間になったことを願っていますもう一度最初から始めるには、ページを更新してください。
         </textarea
       >
     </div>
@@ -197,7 +195,7 @@
     <div id="taskbar">
       <!-- playlist modal popup button -->
       <div class="taskbar_start" id="start_win">
-        <img src="assets/icons/start.png" alt="Start" class="taskbar_icon" />
+        <img src="assets/icons/start.gif" alt="Start" class="taskbar_icon" />
         <span>スタート</span>
       </div>
 
@@ -241,30 +239,14 @@
               <small>プレイリスト</small>
             </div>
             <div id="superhero" class="media">
-              <div class="media_left">
-                <img
-                  class="media_object"
-                  src="assets/backgrounds/superhero.jpg"
-                  width="35"
-                  height="35"
-                  alt="..."
-                />
-              </div>
+              <div class="media_left"></div>
               <div class="media_body">
                 <small class="media_heading">SUPERHERO</small>
               </div>
             </div>
             <div id="ourfuturewithyou" class="media">
               <div class="media_left">
-                <a href="#">
-                  <img
-                    class="media_object"
-                    src="assets/backgrounds/ourfuturewithyou.jpg"
-                    width="35"
-                    height="35"
-                    alt="..."
-                  />
-                </a>
+                <a href="#"> </a>
               </div>
               <div class="media_body">
                 <small class="media_heading">いつか君と話したミライは</small>
@@ -272,15 +254,7 @@
             </div>
             <div id="futurenote" class="media">
               <div class="media_left">
-                <a href="#">
-                  <img
-                    class="media_object"
-                    src="assets/backgrounds/futurenote.jpg"
-                    width="35"
-                    height="35"
-                    alt="..."
-                  />
-                </a>
+                <a href="#"> </a>
               </div>
               <div class="media_body">
                 <small class="media_heading">フューチャーノーツ</small>
@@ -288,15 +262,7 @@
             </div>
             <div id="miraisymphony" class="media">
               <div class="media_left">
-                <a href="#">
-                  <img
-                    class="media_object"
-                    src="assets/backgrounds/miraisymphony.jpg"
-                    width="35"
-                    height="35"
-                    alt="..."
-                  />
-                </a>
+                <a href="#"> </a>
               </div>
               <div class="media_body">
                 <small class="media_heading">未来交響曲</small>
@@ -304,15 +270,7 @@
             </div>
             <div id="reality" class="media">
               <div class="media_left">
-                <a href="#">
-                  <img
-                    class="media_object"
-                    src="assets/backgrounds/reality.jpg"
-                    width="35"
-                    height="35"
-                    alt="..."
-                  />
-                </a>
+                <a href="#"> </a>
               </div>
               <div class="media_body">
                 <small class="media_heading">リアリティ</small>
@@ -320,15 +278,7 @@
             </div>
             <div id="themarks" class="media">
               <div class="media_left">
-                <a href="#">
-                  <img
-                    class="media_object"
-                    src="assets/backgrounds/themarks.jpg"
-                    width="35"
-                    height="35"
-                    alt="..."
-                  />
-                </a>
+                <a href="#"> </a>
               </div>
               <div class="media_body">
                 <small class="media_heading">The Marks</small>

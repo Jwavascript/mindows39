@@ -50,7 +50,7 @@ export function updateTerminal() {
         <div class="window_body">
           <img
             class="window_body_icon"
-            src="assets/images/errormiku.png"
+            src="assets/images/warning2.svg"
             width="50"
             height="50"
           />

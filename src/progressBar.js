@@ -7,7 +7,7 @@ export function updateProgressBar() {
   const progressBar = document.getElementById("progress_bar");
   if (!progressBar) return;
 
-  const maxTime = player.video.lastPhrase.endTime + 1000;
+  const maxTime = player.video.endTime;
   const currentTime = player.timer.position;
   const percentage = Math.floor((currentTime / maxTime) * 100);
 

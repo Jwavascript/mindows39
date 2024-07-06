@@ -27,8 +27,6 @@ superheroDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/superhero.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#00A7C1";
@@ -71,8 +69,6 @@ ourfuturewithyouDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/ourfuturewithyou.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
 
@@ -96,6 +92,7 @@ const futurenoteDiv = document.getElementById("futurenote");
 
 futurenoteDiv.addEventListener("click", () => {
   player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -117,8 +114,6 @@ futurenoteDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/futurenote.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#66619E";
@@ -139,6 +134,7 @@ futurenoteDiv.addEventListener("click", () => {
 const miraisymphonyDiv = document.getElementById("miraisymphony");
 miraisymphonyDiv.addEventListener("click", () => {
   player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -160,8 +156,6 @@ miraisymphonyDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/miraisymphony.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
 
@@ -182,6 +176,7 @@ miraisymphonyDiv.addEventListener("click", () => {
 const realityDiv = document.getElementById("reality");
 realityDiv.addEventListener("click", () => {
   player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -203,8 +198,6 @@ realityDiv.addEventListener("click", () => {
     updateAvMessage(player);
 
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/reality.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#FFE3C4";
@@ -225,6 +218,7 @@ realityDiv.addEventListener("click", () => {
 const themarksDiv = document.getElementById("themarks");
 themarksDiv.addEventListener("click", () => {
   player.requestStop();
+  resetPhrase();
   document.querySelector(".Playground__svg image").removeAttribute("id");
   document.querySelector("#container").innerHTML = "";
 
@@ -245,8 +239,6 @@ themarksDiv.addEventListener("click", () => {
     avContainer.innerHTML = "";
     updateAvMessage(player);
     const body = document.querySelector("body");
-    const image = document.querySelector(".Playground__svg image");
-    image.setAttribute("xlink:href", "assets/backgrounds/themarks.jpg");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
     body.style.backgroundColor = "#000000";
