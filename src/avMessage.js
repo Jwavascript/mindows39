@@ -6,6 +6,7 @@ export function updateAvMessage(player) {
   const avContainer = document.getElementById("error_messages");
   avContainer.innerHTML = "";
 
+  // call getCount() to get a number of errors
   const avMessage = `${getCount()} / ${phrasesLength}`;
   const avElement = document.createElement("div");
   avElement.textContent = avMessage;

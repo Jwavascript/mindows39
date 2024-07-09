@@ -4,12 +4,25 @@ import { setCount } from "./animation.js";
 import { updateAvMessage } from "./avMessage.js";
 import { resetPhrase } from "./animation.js";
 
+// Loads the selected song into the player and updates the UI.
+
+// song : Superhero
+
 const superheroDiv = document.getElementById("superhero");
 superheroDiv.addEventListener("click", () => {
+  // stop current song
   player.requestStop();
+
+  // set currentPhrase to empty
   resetPhrase();
+
+  // Remove the glitch if the wallpaper has a glitch effect
   document.querySelector(".Playground__svg image").removeAttribute("id");
+
+  // Remove all error windows in container
   document.querySelector("#container").innerHTML = "";
+
+  // load playlist song
   player.createFromSongUrl("https://piapro.jp/t/hZ35/20240130103028", {
     video: {
       beatId: 4592293,
@@ -19,13 +32,17 @@ superheroDiv.addEventListener("click", () => {
       lyricDiffId: 13962,
     },
   });
+  // show loader for 2000ms
   showLoader();
   setTimeout(() => {
+    // set error count to zero
     setCount(0);
+    // update internal elements of antivirus ui
     const avContainer = document.getElementById("error_messages");
     avContainer.innerHTML = "";
     updateAvMessage(player);
 
+    // update color of ui
     const body = document.querySelector("body");
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center center";
@@ -45,6 +62,8 @@ superheroDiv.addEventListener("click", () => {
   }, 2000);
 });
 
+// Details are as above
+// song : ourfuturewithyou
 const ourfuturewithyouDiv = document.getElementById("ourfuturewithyou");
 ourfuturewithyouDiv.addEventListener("click", () => {
   player.requestStop();
@@ -88,6 +107,7 @@ ourfuturewithyouDiv.addEventListener("click", () => {
   }, 2000);
 });
 
+// song : future note
 const futurenoteDiv = document.getElementById("futurenote");
 
 futurenoteDiv.addEventListener("click", () => {
@@ -131,6 +151,7 @@ futurenoteDiv.addEventListener("click", () => {
   }, 2000);
 });
 
+// song : mirai symphony
 const miraisymphonyDiv = document.getElementById("miraisymphony");
 miraisymphonyDiv.addEventListener("click", () => {
   player.requestStop();
@@ -173,6 +194,7 @@ miraisymphonyDiv.addEventListener("click", () => {
   }, 2000);
 });
 
+// song : reality
 const realityDiv = document.getElementById("reality");
 realityDiv.addEventListener("click", () => {
   player.requestStop();
@@ -215,6 +237,7 @@ realityDiv.addEventListener("click", () => {
   }, 2000);
 });
 
+// song : the marks
 const themarksDiv = document.getElementById("themarks");
 themarksDiv.addEventListener("click", () => {
   player.requestStop();

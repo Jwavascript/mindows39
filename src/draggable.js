@@ -1,5 +1,6 @@
 // make ui draggable
 
+// support for mouse and touch capabilities
 export function makeDraggable(element, handle) {
   let isDragging = false;
   let startX, startY, startLeft, startTop;

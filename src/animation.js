@@ -2,12 +2,13 @@ import { makeDraggable } from "./draggable.js";
 import { updateAvMessage } from "./avMessage.js";
 import { updateTerminal } from "./terminalMessage.js";
 
-// handle functions about lyric error window
+//processing animation, creating and managing text error window on the screen
 
 export let count = 0;
 
 let lastPhraseText = "";
 
+// Update text and create windows according to a specific unit of time.
 export function animatePhrase(now, unit, player) {
   if (unit.contains(now)) {
     const currentText = unit.text;
@@ -41,14 +42,14 @@ export function animatePhrase(now, unit, player) {
       okButton.addEventListener("click", () => {
         newWindow.remove();
         count++;
-        updateAvMessage(player); // updateAvMessage에 player 전달
+        updateAvMessage(player);
         updateTerminal();
       });
 
       okButton.addEventListener("touchstart", () => {
         newWindow.remove();
         count++;
-        updateAvMessage(player); // updateAvMessage에 player 전달
+        updateAvMessage(player);
         updateTerminal();
       });
 
@@ -57,6 +58,8 @@ export function animatePhrase(now, unit, player) {
     }
   }
 }
+
+// track and manage the number of errors.
 export function getCount() {
   return count;
 }

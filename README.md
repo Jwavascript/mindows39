@@ -1,6 +1,7 @@
 # プロジェクト名 : Mindows 39
 
 デモ·ページ : [link](https://jolly-duckanoo-52ac00.netlify.app)
+デモ·ビデオ : [link](https://youtu.be/8nfAS4_ponU)
 
 ## 1. プロジェクト紹介
 
@@ -31,6 +32,14 @@ npm run dev
 ```
 npm run build
 ```
+
+### ビルドバージョン preview
+
+```
+npm run preview
+```
+
+vite preview は、ローカルでビルドをプレビューするためのもので、本番用のサーバーとしては使えないことに注意してください。
 
 ## 3. 開発する際に助けられた場所
 
@@ -67,3 +76,63 @@ svg フィルターを利用してグリッチ効果を出すのに役立つ
 
 [Google Material Symbols](https://fonts.google.com/icons?icon.size=24&icon.color=%235f6368)
 シンプルなマテリアルデザインのアイコンで、オープンソースだ。
+
+##4. 各ファイルの役割
+
+### animation.js
+
+アニメーション、画面上のテキスト エラー ウィンドウを作成および管理します
+
+### avMessage.js
+
+ウイルス対策 UI テキスト領域を更新する関数です。
+
+### clock.js
+
+下段のバーの時計機能を担当します。
+
+### draggable.js
+
+マウスとタッチで ui をドラッグできるようにするファイル
+
+### eventHandler.js
+
+コントロールパネルに関する機能を扱います（音楽の再生、ジャンプなど）
+
+### loaderFunctions.js
+
+ローダーを表示または非表示にします
+
+### playerControl.js
+
+1. プレイヤーインスタンスを初期化します。
+
+2. アニメーション機能を起動します。
+
+3. 時間の経過とともに現在のコードを更新します。
+
+### progressBar.js
+
+1. アンチウイルス UI の進行状況バーを時間の経過とともに更新します。
+
+2. 曲が終了すると、エラー メッセージが削除される回数に応じてイベントを管理します。
+
+### selectHandler.js
+
+選択した曲をプレーヤーにロードし、UI を更新します。
+
+### terminalMessage.js
+
+ターミナル メッセージ UI を処理するファイルです。このファイルでは、クリア エラーの数に基づいて特定のイベントが実行されます。
+
+### uiControl.js
+
+UI 要素を制御するファイル
+
+### volumeControl.js
+
+ボリュームをコントロールするファイル
+
+### main.js
+
+機能を集めた最上位 js ファイル

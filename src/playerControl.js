@@ -1,6 +1,7 @@
 import { Player, Ease } from "textalive-app-api";
 import { animatePhrase } from "./animation.js";
 
+// initialize the player instance
 export const player = new Player({
   app: {
     token: "Fa7wvVkV0f24otvj",
@@ -38,13 +39,16 @@ function onAppReady(app) {
   }
 }
 
+// Invoke the animation function.
 function onTimerReady() {
   let p = player.video.firstPhrase;
   while (p) {
-    p.animate = (now, unit) => animatePhrase(now, unit, player); // animatePhrase에 player 인스턴스를 전달
+    p.animate = (now, unit) => animatePhrase(now, unit, player);
     p = p.next;
   }
 }
+
+//Show the current chords and the next chords. Update the current chords over time.
 
 function onTimeUpdate(position) {
   let lastChordText = "";
