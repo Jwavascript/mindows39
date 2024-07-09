@@ -77,7 +77,7 @@ svg フィルターを利用してグリッチ効果を出すのに役立つ
 [Google Material Symbols](https://fonts.google.com/icons?icon.size=24&icon.color=%235f6368)
 シンプルなマテリアルデザインのアイコンで、オープンソースだ。
 
-##4. 各ファイルの役割
+## 4. 各ファイルの役割
 
 ### animation.js
 
